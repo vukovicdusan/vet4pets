@@ -9,8 +9,7 @@ const Footer = () => {
 			<Wrapper>
 				<p className={styles.footerCenter}>
 					{" "}
-					Copyright © {year} Milica Janevski | Website by Dušan
-					Vuković{" "}
+					Copyright © {year} vet4Pets | Website by Dušan Vuković{" "}
 				</p>
 			</Wrapper>
 		</footer>
