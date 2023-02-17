@@ -1,0 +1,26 @@
+.underlineContainerStart,
+.underlineContainerEnd {
+	display: flex;
+}
+
+.underlineContainerEnd {
+	justify-content: flex-end;
+}
+
+.underlinePrimary,
+.underlineSecondary {
+	display: block;
+	width: 8rem;
+	height: 5px;
+	background-color: var(--primary);
+	margin-block: var(--s1);
+	border-radius: 20px;
+}
+
+.underlineSecondary {
+	background-color: var(--secondary);
+}
+
+.underlineThin {
+	height: 2px;
+}

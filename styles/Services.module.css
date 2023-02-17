@@ -1,0 +1,81 @@
+.serviceBackground {
+	background-color: var(--background-dark);
+	position: relative;
+	padding-block-start: 7rem;
+}
+
+.shapedivider {
+	composes: shapedivider from "./ShapeDivider.module.css";
+}
+
+.switcher {
+	composes: switcher from "../styles/Switcher.module.css";
+	gap: var(--s3);
+	flex-direction: row-reverse;
+}
+
+.switcher > * {
+	flex-basis: calc((45rem - 100%) * 999);
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	color: var(--text-dark);
+}
+
+.switcher img {
+	object-fit: contain;
+}
+
+.servicesGrid {
+	composes: grid from "../styles/Grid.module.css";
+	grid-gap: 2rem;
+}
+
+.serviceStack {
+	composes: stack from "../styles/Stack.module.css";
+}
+
+.serviceStack > * {
+	--stack-space: var(--s5);
+}
+
+.serviceBox {
+	composes: box from "../styles/Box.module.css";
+	padding: var(--s2);
+	border: 0;
+	border-radius: 20px;
+	box-shadow: 0px 0px 25px rgb(0 0 0 / 20%);
+}
+
+.innerBox {
+	composes: stack from "../styles/Stack.module.css";
+}
+
+.innerBox img {
+	object-fit: contain;
+}
+
+.animalGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.blob {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.animalGrid img {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	object-fit: contain;
+	z-index: 1;
+}
+
+.blob {
+	composes: blob from "./Blob.module.css";
+}

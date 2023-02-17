@@ -1,0 +1,28 @@
+.header {
+	background-color: transparent;
+	padding-block: var(--s0);
+	color: var(--text-dark);
+	box-shadow: var(--box-shadow);
+}
+
+.headerWrap {
+	composes: wrap from "./Wrap.module.css";
+}
+
+/* .headerLogo,
+.desktopNav a {
+	color: var(--text-dark);
+} */
+
+.headerLogo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 550px) {
+	.headerWrap {
+		composes: wrap from "./Wrap.module.css";
+		--wrap-justify: center;
+	}
+}

@@ -1,0 +1,10 @@
+.footer {
+	background-color: var(--primary);
+	color: var(--text-light);
+	font-size: var(--s-2);
+	text-align: center;
+}
+
+.footerCenter {
+	composes: center from "../styles/Center.module.css";
+}
