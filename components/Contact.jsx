@@ -71,7 +71,7 @@ const Contact = () => {
 				<Wrapper>
 					<Title>
 						<div className={styles.title}>
-							<h2 className="section-title">Kontakt</h2>
+							<h2 className="section-title">Pronadji nas.</h2>
 							<Underline
 								position={"start"}
 								color={"secondary"}
@@ -125,12 +125,45 @@ const Contact = () => {
 							<div className={styles.contactInfo}>
 								<ul className={styles.contactInfoStack}>
 									<li>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="#172189"
+										>
+											<path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.311l-1.76-3.397-1.032.505c-1.12.543-3.4-3.91-2.305-4.497l1.042-.513-1.747-3.409-1.053.52c-3.601 1.877 2.117 12.991 5.8 11.308l1.055-.517z" />
+										</svg>
 										Tel:{" "}
 										<a href="tel:064/117 84 43">
 											064/117 84 43
 										</a>
 									</li>
 									<li>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="#172189"
+										>
+											<path d="M12 2.02c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 12.55l-5.992-4.57h11.983l-5.991 4.57zm0 1.288l-6-4.629v6.771h12v-6.771l-6 4.629z" />
+										</svg>
+										Mail:{" "}
+										<a href="mailto:amb.vet4pets@gmail.com">
+											amb.vet4pets@gmail.com
+										</a>
+									</li>
+									<li>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="#172189"
+										>
+											<path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+										</svg>
 										Adresa:&nbsp;
 										<a
 											href="https://goo.gl/maps/svr11GUbX67fyoUL7"
@@ -139,18 +172,13 @@ const Contact = () => {
 											Branka Cvetkovića br.6, Žarkovo
 										</a>
 									</li>
-									<li>
-										Mail:{" "}
-										<a href="mailto:amb.vet4pets@gmail.com">
-											amb.vet4pets@gmail.com
-										</a>
-									</li>
 								</ul>
 							</div>
 							<form
 								onSubmit={onSubmitHandler}
 								className={styles.contactStack}
 							>
+								<h3>Javi se!</h3>
 								{!contactFormProccess.success &&
 								contactFormProccess.error ? (
 									<p className={styles.error}>
