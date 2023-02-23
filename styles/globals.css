@@ -221,10 +221,49 @@ h6 {
 input,
 select,
 textarea {
+	padding: var(--s-1) var(--s0);
 	border: 1px solid var(--text-gray);
 	border-radius: 4px;
 	min-inline-size: 25rem;
 	background: var(--background-light);
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	height: 10px;
+	border-radius: 5px;
+	padding: 0;
+	background-color: var(--primary);
+	background: linear-gradient(
+		to right,
+		#e23c2d 0,
+		#e23c2d 8%,
+		#ddd72c 26%,
+		#ddd72c 37%,
+		#2ebc23 50%,
+		#ddd72c 62%,
+		#ddd72c 73%,
+		#e23c2d 100%
+	);
+	transition: all 0.3 ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	cursor: grab;
+	height: 20px;
+	width: 20px;
+	border: 1px solid var(--text-gray);
+	border-radius: 50px;
+	margin-bottom: 15px;
+	background-color: var(--text-light);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	box-shadow: none;
+	border: none;
+	background: transparent;
 }
 
 @media (max-width: 450px) {

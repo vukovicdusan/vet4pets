@@ -28,7 +28,7 @@ const Header = () => {
 								</li>
 								<li>
 									<Link href={"./kalkulator"}>
-										Kalkulator
+										Kalkulator Kalorija
 									</Link>
 								</li>
 								<li>

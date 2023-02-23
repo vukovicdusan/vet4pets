@@ -4,7 +4,7 @@ import styles from "@/styles/Title.module.css"
 const Title = (props) => {
 	let animationRef = useRef()
 	const [show, setShow] = useState(false)
-	// animationRef.current.style.transform = "translateX(-500px)"
+
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
@@ -40,7 +40,7 @@ const Title = (props) => {
 	}
 
 	let showClass = show ? styles.show : null
-	console.log(show)
+
 	return (
 		<div className="animation-container">
 			<div className={`${styles.hidden} ${showClass}`} ref={animationRef}>

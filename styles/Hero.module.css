@@ -19,7 +19,6 @@
 
 .shapedivider {
 	composes: shapedivider from "@/styles/ShapeDivider.module.css";
-	/* transform: rotate(0deg); */
 }
 
 .shapedivider svg {
