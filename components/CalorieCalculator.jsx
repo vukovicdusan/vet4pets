@@ -241,6 +241,7 @@ const CalorieCalculator = () => {
 							<Image
 								src={bcs}
 								width={650}
+								height={400}
 								alt="body condition score tabela"
 							></Image>
 						</div>
@@ -250,7 +251,7 @@ const CalorieCalculator = () => {
 									calories ? styles.box : null
 								}`}
 							>
-								{calories ? Math.floor(calories) : null}kcal
+								{calories ? Math.floor(calories) : null} kcal
 							</div>
 						</div>
 						<button className="button">Izračunaj</button>
