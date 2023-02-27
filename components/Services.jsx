@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Region from "./layout/Region"
 import Wrapper from "./layout/Wrapper"
 import Underline from "./Underline"
@@ -9,6 +9,7 @@ import animal from "../public/img/korgey.png"
 import Title from "./Title"
 
 const Services = () => {
+	const [servicesAmount, setServicesAmount] = useState(6)
 	const services = [
 		{
 			title: "Vakcinacija",
@@ -50,8 +51,52 @@ const Services = () => {
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
 			img: dropper,
 		},
+		{
+			title: "Dermatoskopija (koža)",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Ultrazvuk",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Anestezija (injekciona i inhalaciona)",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Brzi testovi na bolesti",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Porodiljstvo",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Stomatologija",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Hirurške intervencije",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Apoteka",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
+		{
+			title: "Kućne posete",
+			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
+			img: dropper,
+		},
 	]
-
 	return (
 		<div className={styles.serviceBackground}>
 			<div className={styles.shapedivider}>
@@ -90,28 +135,45 @@ const Services = () => {
 							</div>
 						</div>
 						<div className={styles.servicesGrid}>
-							{services.map((service, index) => (
-								<div key={index} className={styles.serviceBox}>
-									<div className={styles.innerBox}>
-										<Image
-											src={dropper}
-											alt="icon"
-											width={50}
-											height={50}
-										></Image>
-										<div>
-											<h5>{service.title}</h5>
-											<Underline
-												position={"start"}
-												color={"secondary"}
-												weight={"thin"}
-											></Underline>
+							{services
+								.slice(0, servicesAmount)
+								.map((service, index) => (
+									<div
+										key={index}
+										className={styles.serviceBox}
+									>
+										<div className={styles.innerBox}>
+											<Image
+												src={dropper}
+												alt="icon"
+												width={50}
+												height={50}
+											></Image>
+											<div>
+												<h5>{service.title}</h5>
+												<Underline
+													position={"start"}
+													color={"secondary"}
+													weight={"thin"}
+												></Underline>
+											</div>
+											<p>{service.desc}</p>
 										</div>
-										<p>{service.desc}</p>
 									</div>
-								</div>
-							))}
+								))}
 						</div>
+						{servicesAmount < services.length ? (
+							<button
+								onClick={() => {
+									setServicesAmount(
+										(prevState) => prevState + 3
+									)
+								}}
+								className="button"
+							>
+								Učitaj još
+							</button>
+						) : null}
 					</div>
 				</Wrapper>
 			</Region>

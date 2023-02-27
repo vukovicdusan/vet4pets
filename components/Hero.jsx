@@ -41,10 +41,18 @@ const Hero = () => {
 		)
 		currentIteration++
 		if (easingValue >= 0) {
-			titleRef.current.style.transform = `translateY(${easingValue}px)`
-			subTitleRef.current.style.transform = `translateY(${easingValue}px)`
-			btnRef.current.style.transform = `translateY(${easingValue}px)`
-			lineRef.current.style.transform = `translateX(${easingValue}px)`
+			titleRef.current
+				? (titleRef.current.style.transform = `translateY(${easingValue}px)`)
+				: null
+			subTitleRef.current
+				? (subTitleRef.current.style.transform = `translateY(${easingValue}px)`)
+				: null
+			btnRef.current
+				? (btnRef.current.style.transform = `translateY(${easingValue}px)`)
+				: null
+			lineRef.current
+				? (lineRef.current.style.transform = `translateX(${easingValue}px)`)
+				: null
 			requestAnimationFrame(animate)
 		}
 	}
