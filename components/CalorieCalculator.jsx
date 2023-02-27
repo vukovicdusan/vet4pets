@@ -17,14 +17,38 @@ const CalorieCalculator = () => {
 
 	const calculateCalories = (e) => {
 		e.preventDefault()
+		let bcsValue
+		switch (params.bcs) {
+			case "0":
+				{
+					bcsValue = 1.2
+				}
+				break
+			case "1":
+				{
+					bcsValue = 1
+				}
+				break
+			case "2":
+				{
+					bcsValue = 0.8
+				}
+				break
+		}
 
 		let calorieFormula =
 			70 *
 			Math.pow(params.weight, 0.75) *
 			params.signalment *
 			params.activity *
-			params.bcs
+			bcsValue
 		setCalories(calorieFormula)
+		console.log(
+			70 * Math.pow(params.weight, 0.75),
+			params.signalment,
+			params.activity,
+			bcsValue
+		)
 	}
 
 	// console.log(70 * Math.pow(29, 0.75))
