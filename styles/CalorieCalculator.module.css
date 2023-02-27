@@ -53,7 +53,9 @@ input:focus + .borderTitle {
 	position: relative;
 }
 
-.rangeInput:hover svg {
+.rangeInput:hover svg,
+.rangeInput:focus svg,
+.rangeInput:active svg {
 	cursor: pointer;
 	animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
 }
