@@ -10,7 +10,8 @@ const Title = (props) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					setShow(true)
-					animate()
+					requestAnimationFrame(() => animate(entry.target))
+					// animate(entry.target)
 				}
 			})
 		})
@@ -30,12 +31,12 @@ const Title = (props) => {
 		)
 	}
 	let currentIteration = 0
-	const animate = () => {
+	const animate = (el) => {
 		let easingValue = easeOutQuint(currentIteration, -500, 500, 120)
 		currentIteration++
 		if (easingValue <= 0) {
-			animationRef.current.style.transform = `translateX(${easingValue}px)`
-			requestAnimationFrame(animate)
+			el.style.transform = `translateX(${easingValue}px)`
+			requestAnimationFrame(() => animate(el))
 		}
 	}
 

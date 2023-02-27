@@ -1,6 +1,11 @@
 .underlineContainerStart,
-.underlineContainerEnd {
+.underlineContainerEnd,
+.underlineContainerCenter {
 	display: flex;
+}
+
+.underlineContainerCenter {
+	justify-content: center;
 }
 
 .underlineContainerEnd {

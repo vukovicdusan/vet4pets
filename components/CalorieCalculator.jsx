@@ -3,6 +3,8 @@ import styles from "@/styles/CalorieCalculator.module.css"
 import Region from "./layout/Region"
 import Wrapper from "./layout/Wrapper"
 import Image from "next/image"
+import Title from "./Title"
+import Underline from "./Underline"
 import bcs from "@/public/img/bcs_chart_dog.jpg"
 
 const CalorieCalculator = () => {
@@ -117,6 +119,17 @@ const CalorieCalculator = () => {
 		<Region>
 			<Wrapper>
 				<div className={styles.center}>
+					<Title>
+						<div className={styles.title}>
+							<h2 className="section-title">
+								Kalkulator Kalorija
+							</h2>
+							<Underline
+								// position={"center"}
+								color={"secondary"}
+							></Underline>
+						</div>
+					</Title>
 					<form className={styles.stack} onSubmit={calculateCalories}>
 						<div className={styles.inputWrapper}>
 							<input

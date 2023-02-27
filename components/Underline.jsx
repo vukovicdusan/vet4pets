@@ -10,9 +10,11 @@ const Underline = (props) => {
 	return (
 		<div
 			className={
-				props.position === "start"
-					? styles.underlineContainerStart
-					: styles.underlineContainerEnd
+				props.position
+					? props.position === "start"
+						? styles.underlineContainerStart
+						: styles.underlineContainerEnd
+					: styles.underlineContainerCenter
 			}
 		>
 			<div className={`${thinBold} ${color}`}></div>
