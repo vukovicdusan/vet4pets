@@ -26,10 +26,20 @@ const CalorieCalculator = () => {
 				break
 			case "1":
 				{
-					bcsValue = 1
+					bcsValue = 1.1
 				}
 				break
 			case "2":
+				{
+					bcsValue = 1
+				}
+				break
+			case "3":
+				{
+					bcsValue = 0.9
+				}
+				break
+			case "4":
 				{
 					bcsValue = 0.8
 				}
@@ -187,7 +197,7 @@ const CalorieCalculator = () => {
 								id="bcs"
 								name="bcs"
 								min="0"
-								max="2"
+								max="4"
 								step="1"
 								list="markers"
 								defaultValue={1}
@@ -202,11 +212,19 @@ const CalorieCalculator = () => {
 								</option>
 								<option
 									className={styles.optionValues}
+									value={1.1}
+								></option>
+								<option
+									className={styles.optionValues}
 									value={1}
 									label="Idealan"
 								>
 									Idealan
 								</option>
+								<option
+									className={styles.optionValues}
+									value={0.9}
+								></option>
 								<option
 									className={styles.optionValues}
 									value={0.8}
