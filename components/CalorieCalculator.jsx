@@ -200,7 +200,7 @@ const CalorieCalculator = () => {
 								max="4"
 								step="1"
 								list="markers"
-								defaultValue={1}
+								defaultValue={0}
 							/>
 							<datalist id="markers">
 								<option
