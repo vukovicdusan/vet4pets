@@ -4,7 +4,22 @@ import Wrapper from "./layout/Wrapper"
 import Underline from "./Underline"
 import Image from "next/image"
 import styles from "../styles/Services.module.css"
-import dropper from "../public/img/dropper.png"
+import dropper from "../public/img/services/icons/dropper.png"
+import vaccine from "../public/img/services/icons/vaccine.png"
+import location from "../public/img/services/icons/location (1).png"
+import veterinarian from "../public/img/services/icons/veterinarian (1).png"
+import cat from "../public/img/services/icons/cat.png"
+import bloodwork from "../public/img/services/icons/bloodwork.png"
+import microscope from "../public/img/services/icons/microscope.png"
+import veterinary from "../public/img/services/icons/veterinary (1).png"
+import skin from "../public/img/services/icons/skin.png"
+import scan from "../public/img/services/icons/scan.png"
+import anesthesia from "../public/img/services/icons/anesthesia.png"
+import test from "../public/img/services/icons/test.png"
+import birth from "../public/img/services/icons/birth.png"
+import tooth from "../public/img/services/icons/tooth.png"
+import table from "../public/img/services/icons/table.png"
+import hotline from "../public/img/services/icons/hotline.png"
 import animal from "../public/img/korgey.png"
 import Title from "./Title"
 
@@ -14,27 +29,27 @@ const Services = () => {
 		{
 			title: "Vakcinacija",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: vaccine,
 		},
 		{
 			title: "Čipovanje i pasoši",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: location,
 		},
 		{
 			title: "Klinički pregled",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: veterinarian,
 		},
 		{
 			title: "Otoskopski pregled (uši)",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: veterinary,
 		},
 		{
 			title: "Rinoskopija (nos)",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: cat,
 		},
 		{
 			title: "Oftamologija (oči)",
@@ -44,47 +59,47 @@ const Services = () => {
 		{
 			title: "Krvna slika i biohemija",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: bloodwork,
 		},
 		{
 			title: "Mikroskopski pregled",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: microscope,
 		},
 		{
 			title: "Dermatoskopija (koža)",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: skin,
 		},
 		{
 			title: "Ultrazvuk",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: scan,
 		},
 		{
 			title: "Anestezija (injekciona i inhalaciona)",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: anesthesia,
 		},
 		{
 			title: "Brzi testovi na bolesti",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: test,
 		},
 		{
 			title: "Porodiljstvo",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: birth,
 		},
 		{
 			title: "Stomatologija",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: tooth,
 		},
 		{
 			title: "Hirurške intervencije",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: table,
 		},
 		{
 			title: "Apoteka",
@@ -94,7 +109,7 @@ const Services = () => {
 		{
 			title: "Kućne posete",
 			desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum earum ipsa corporis sint minima, quae incidunt exercitationem maxime! Velit?",
-			img: dropper,
+			img: hotline,
 		},
 	]
 	return (
@@ -144,7 +159,7 @@ const Services = () => {
 									>
 										<div className={styles.innerBox}>
 											<Image
-												src={dropper}
+												src={service.img}
 												alt="icon"
 												width={50}
 												height={50}
