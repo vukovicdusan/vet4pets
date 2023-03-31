@@ -29,20 +29,6 @@
 	align-self: center;
 }
 
-/* .socials {
-	composes: stack from "../styles/Stack.module.css";
-}
-
-.socials svg {
-	width: var(--s5);
-	height: var(--s5);
-	transition: fill 0.3s ease-in-out;
-}
-
-.socials svg:hover {
-	fill: var(--secondary);
-} */
-
 .animalGrid {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -110,6 +96,12 @@ input:focus + .borderTitle,
 textarea:focus + .borderTitle {
 	font-size: 0.8rem;
 	top: -6px;
+}
+
+.buttonAndLoader {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .success {
