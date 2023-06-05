@@ -1,0 +1,57 @@
+.stack {
+  composes: stack from "@/styles/Stack.module.css";
+  --stack-align: center;
+  color: var(--text-dark);
+}
+
+.stack > * + * {
+  --stack-space: var(--s2);
+}
+
+.center {
+  composes: center from "@/styles/Center.module.css";
+}
+
+.hiddenBox {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  padding-inline: var(--s4);
+  /* height: 65px; */
+}
+
+.box {
+  composes: box from "@/styles/Box.module.css";
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.borderTitle {
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background-color: var(--background-light);
+  padding-inline: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+input:focus + .borderTitle {
+  font-size: 0.8rem;
+  top: -6px;
+}
+
+.success {
+  color: var(--secondary);
+}
+
+.error {
+  color: indianred;
+}

@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
-import styles from "@/styles/CalorieCalculator.module.css";
-import Region from "./layout/Region";
-import Wrapper from "./layout/Wrapper";
+import styles from "./CalorieCalculator.module.css";
+import Region from "../../layout/Region";
+import Wrapper from "../../layout/Wrapper";
 import Image from "next/image";
-import Title from "./Title";
-import Underline from "./Underline";
+import Title from "../../Title";
+import Underline from "../../Underline";
 import bcs from "@/public/img/bcs_chart_dog.jpg";
+import useCalorieCalculator from "@/hooks/useCalorieCalculator";
 
 const CalorieCalculator = () => {
   const [params, setParams] = useState({
@@ -15,37 +16,16 @@ const CalorieCalculator = () => {
     bcs: "1",
   });
   const [accordionOpen, setAccordionOpen] = useState(false);
-  const [calories, setCalories] = useState("");
 
-  const calculateCalories = (e) => {
-    e.preventDefault();
-
-    const bcsValues = {
-      0: 1.2,
-      1: 1.1,
-      2: 1,
-      3: 0.9,
-      4: 0.8,
-    };
-    const bcsValue = bcsValues[params.bcs];
-
-    let calorieFormula =
-      70 *
-      Math.pow(params.weight, 0.75) *
-      params.signalment *
-      params.activity *
-      bcsValue;
-    setCalories(calorieFormula);
-    console.log(
-      70 * Math.pow(params.weight, 0.75),
-      params.signalment,
-      params.activity,
-      bcsValue
-    );
-  };
+  const [calculateCalories, calories] = useCalorieCalculator();
 
   const inputHandler = (e) => {
     setParams((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    calculateCalories(params);
   };
 
   //REFS
@@ -77,7 +57,7 @@ const CalorieCalculator = () => {
               ></Underline>
             </div>
           </Title>
-          <form className={styles.stack} onSubmit={calculateCalories}>
+          <form className={styles.stack} onSubmit={submitHandler}>
             <div className={styles.inputWrapper}>
               <input
                 type="text"

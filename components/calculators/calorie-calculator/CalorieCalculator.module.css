@@ -1,0 +1,147 @@
+.stack {
+  composes: stack from "@/styles/Stack.module.css";
+  --stack-align: center;
+  color: var(--text-dark);
+}
+
+.stack > * + * {
+  --stack-space: var(--s2);
+}
+
+.center {
+  composes: center from "@/styles/Center.module.css";
+}
+
+.hiddenBox {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  padding-inline: var(--s4);
+  /* height: 65px; */
+}
+
+.box {
+  composes: box from "@/styles/Box.module.css";
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.borderTitle {
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background-color: var(--background-light);
+  padding-inline: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+input:focus + .borderTitle {
+  font-size: 0.8rem;
+  top: -6px;
+}
+
+.rangeInput {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.rangeInput:hover svg,
+.rangeInput:focus svg,
+.rangeInput:active svg {
+  cursor: pointer;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+}
+
+.rangeInput svg {
+  fill: var(--secondary);
+  transition: fill 0.2s ease;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.rangeInput svg:hover {
+  fill: var(--primary);
+  cursor: pointer;
+}
+
+.rangeInput label {
+  margin-inline-start: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.rangeInput datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+}
+
+.optionValues {
+  text-align: center;
+  transform: rotateZ(-90deg) translateX(35px);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+.accordionContent img {
+  object-fit: contain;
+}
+
+.success {
+  color: var(--secondary);
+}
+
+.error {
+  color: indianred;
+}
+
+@media (max-width: 650px) {
+  .contactStack {
+    --stack-justify: center;
+  }
+}
+@media (max-width: 450px) {
+  .accordionContent img {
+    margin-block: -4rem;
+  }
+}
