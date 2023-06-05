@@ -44,42 +44,10 @@ const CalorieCalculator = () => {
     );
   };
 
-  // console.log(70 * Math.pow(29, 0.75))
   const inputHandler = (e) => {
-    switch (e.target.name) {
-      case "weight":
-        {
-          setParams((prev) => ({ ...prev, weight: e.target.value }));
-        }
-        break;
-      case "signalment":
-        {
-          setParams((prev) => ({
-            ...prev,
-            signalment: e.target.value,
-          }));
-        }
-        break;
-      case "activity":
-        {
-          setParams((prev) => ({
-            ...prev,
-            activity: e.target.value,
-          }));
-        }
-        break;
-      case "bcs":
-        {
-          setParams((prev) => ({
-            ...prev,
-            bcs: e.target.value,
-          }));
-        }
-        break;
-      default:
-        "";
-    }
+    setParams((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
   //REFS
   const accordionRef = useRef();
 
