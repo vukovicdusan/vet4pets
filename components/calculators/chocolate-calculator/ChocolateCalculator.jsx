@@ -4,10 +4,26 @@ import Region from "@/components/layout/Region";
 import Wrapper from "@/components/layout/Wrapper";
 import Title from "@/components/Title";
 import Underline from "@/components/Underline";
+import useInput from "@/hooks/useInput";
+import useCalculator from "@/hooks/useCalculator";
 
 const ChocolateCalculator = () => {
-  const submitHandler = () => {};
-  const inputHandler = () => {};
+  const [inputValues, changeHandler] = useInput({
+    weight: 0,
+    chocolateAmount: 0,
+    chocolateType: 0.0882,
+  });
+  const [, , calculateChocolate, toxicity] = useCalculator();
+
+  const inputHandler = (e) => {
+    changeHandler(e);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    calculateChocolate(inputValues);
+  };
+
   return (
     <Region>
       <Wrapper>
@@ -40,15 +56,57 @@ const ChocolateCalculator = () => {
                 Težina(kg)
               </label>
             </div>
-
+            <div className={styles.inputWrapper}>
+              <input
+                type="text"
+                name="chocolateAmount"
+                id="chocolateAmount"
+                autoCapitalize="none"
+                autoCorrect="off"
+                required
+                title="UNESITE VALIDNU KOLIČINU"
+                pattern="\d+"
+                onChange={inputHandler}
+              />
+              <label className={styles.borderTitle} htmlFor="chocolateAmount">
+                Količina čokolade(g)
+              </label>
+            </div>
+            <div className={styles.inputWrapper}>
+              <select
+                onChange={inputHandler}
+                id="chocolateType"
+                name="chocolateType"
+                defaultValue={0.00882}
+              >
+                <option value={"white"}>Bela</option>
+                <option value={"milk"}>Mlečna</option>
+                <option value={"darkSweet"}>Crna slatka</option>
+                <option value={"dark60"}>Crna sa 60% kakaa</option>
+                <option value={"dark72"}>Crna sa 72% kakaa</option>
+                <option value={"dark86"}>Crna sa 86% kakaa</option>
+                <option value={"pudding"}>Čokoladni puding</option>
+                <option value={"cake"}>Čokoladna torta</option>
+                <option value={"baking"}>Čokolada za kuvanje</option>
+              </select>
+              <label className={styles.borderTitle} htmlFor="chocolateType">
+                Vrsta čokolade
+              </label>
+            </div>
             <div className="animation-container">
-              {/* <div
+              <div
                 className={`${styles.hiddenBox} ${
-                  calories ? styles.box : null
+                  toxicity ? styles.box : null
                 }`}
               >
-                {calories ? Math.floor(calories) : null} kcal
-              </div> */}
+                <div className={`${styles.stack} ${styles.infoStack}`}>
+                  <p>{toxicity ? toxicity.dose.toFixed(2) : null} mg/kg</p>
+                  <span className={styles.description}>
+                    Methylxantines = Theobromine + Caffeine
+                  </span>
+                  <span>{toxicity.prognosis}</span>
+                </div>
+              </div>
             </div>
             <button className="button">Izračunaj</button>
           </form>

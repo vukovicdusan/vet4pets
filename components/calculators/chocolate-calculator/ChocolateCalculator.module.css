@@ -8,6 +8,10 @@
   --stack-space: var(--s2);
 }
 
+.infoStack > * + * {
+  --stack-space: var(--s-2);
+}
+
 .center {
   composes: center from "@/styles/Center.module.css";
 }
@@ -25,33 +29,19 @@
   border: 1px solid var(--primary);
   border-radius: 4px;
   transform: translateX(0);
+  text-align: center;
   opacity: 1;
 }
 
 .inputWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  composes: inputWrapper from "@/styles/InputWrapper.module.css";
 }
 
 .borderTitle {
-  position: absolute;
-  top: -12px;
-  right: 15px;
-  background-color: var(--background-light);
-  padding-inline: 0.5rem;
-  transition: all 0.2s ease;
+  composes: borderTitle from "@/styles/InputWrapper.module.css";
 }
 
-input:focus + .borderTitle {
-  font-size: 0.8rem;
-  top: -6px;
-}
-
-.success {
-  color: var(--secondary);
-}
-
-.error {
-  color: indianred;
+.description {
+  color: var(--background-dark);
+  font-size: var(--s-1);
 }

@@ -6,10 +6,12 @@ import Image from "next/image";
 import Title from "../../Title";
 import Underline from "../../Underline";
 import bcs from "@/public/img/bcs_chart_dog.jpg";
-import useCalorieCalculator from "@/hooks/useCalorieCalculator";
+import useCalculator from "@/hooks/useCalculator";
+import useInput from "@/hooks/useInput";
 
 const CalorieCalculator = () => {
-  const [params, setParams] = useState({
+  const [calculateCalories, calories] = useCalculator();
+  const [inputValues, changeHandler] = useInput({
     weight: "",
     signalment: "1.6",
     activity: "1",
@@ -17,15 +19,13 @@ const CalorieCalculator = () => {
   });
   const [accordionOpen, setAccordionOpen] = useState(false);
 
-  const [calculateCalories, calories] = useCalorieCalculator();
-
   const inputHandler = (e) => {
-    setParams((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    changeHandler(e);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    calculateCalories(params);
+    calculateCalories(inputValues);
   };
 
   //REFS

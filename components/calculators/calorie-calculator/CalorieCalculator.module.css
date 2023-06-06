@@ -29,23 +29,11 @@
 }
 
 .inputWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  composes: inputWrapper from "@/styles/InputWrapper.module.css";
 }
 
 .borderTitle {
-  position: absolute;
-  top: -12px;
-  right: 15px;
-  background-color: var(--background-light);
-  padding-inline: 0.5rem;
-  transition: all 0.2s ease;
-}
-
-input:focus + .borderTitle {
-  font-size: 0.8rem;
-  top: -6px;
+  composes: borderTitle from "@/styles/InputWrapper.module.css";
 }
 
 .rangeInput {
@@ -125,14 +113,6 @@ input:focus + .borderTitle {
 }
 .accordionContent img {
   object-fit: contain;
-}
-
-.success {
-  color: var(--secondary);
-}
-
-.error {
-  color: indianred;
 }
 
 @media (max-width: 650px) {
