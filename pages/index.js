@@ -4,6 +4,7 @@ import Services from "@/components/services/Services.jsx";
 import Testimonials from "@/components/testimonials/Testimonials.jsx";
 import AboutMe from "@/components/about/AboutMe.jsx";
 import Contact from "@/components/contact/Contact.jsx";
+import CalculatorsCta from "@/components/calculators-cta/calculatorsCta.jsx";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero></Hero>
+      <CalculatorsCta></CalculatorsCta>
       <Services></Services>
       <Testimonials></Testimonials>
       <AboutMe></AboutMe>

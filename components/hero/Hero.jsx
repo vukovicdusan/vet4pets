@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./Hero.module.css";
 import dog from "../../public/img/akita.png";
 import { animationCaller } from "./heroHelpers";
+import Link from "next/link";
 
 const Hero = () => {
   let titleRef = useRef();
@@ -47,7 +48,17 @@ const Hero = () => {
               </div>
               <div className={styles.animationContainer}>
                 <button ref={btnRef} className="button">
-                  Zakažite pregled
+                  <a className="link-exception" href="#contact">
+                    Zakažite pregled
+                  </a>
+                </button>
+                <button ref={btnRef} className="button">
+                  <Link
+                    className="link-exception"
+                    href={"./kalkulator-kalorija"}
+                  >
+                    Kalkulator Kalorija
+                  </Link>
                 </button>
               </div>
             </div>

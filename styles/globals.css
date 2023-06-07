@@ -96,6 +96,16 @@ a {
   transition: all 0.3s ease;
 }
 
+a.link-exception {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.link-exception:hover {
+  text-decoration: none;
+  text-decoration-color: inherit;
+}
+
 a:hover {
   text-decoration: underline;
   text-decoration-color: var(--secondary);
@@ -353,12 +363,6 @@ input:-internal-autofill-selected {
 .main-color {
   color: var(--primary);
 }
-
-/* .spacer {
-	height: 30px;
-	width: 1px;
-	background-color: var(--primary);
-} */
 
 .text-clamp {
   --clamp-w: 30ch;

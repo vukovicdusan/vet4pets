@@ -8,6 +8,10 @@
   composes: shapedivider from "@/styles/ShapeDivider.module.css";
 }
 
+.shapedivider svg path {
+  fill: var(--background-light);
+}
+
 .switcher {
   composes: switcher from "@/styles/Switcher.module.css";
   gap: var(--s3);
