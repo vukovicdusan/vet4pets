@@ -3,7 +3,7 @@ import Hero from "../components/hero/Hero.jsx";
 import Services from "@/components/services/Services.jsx";
 import Testimonials from "@/components/testimonials/Testimonials.jsx";
 import AboutMe from "@/components/about/AboutMe.jsx";
-import Contact from "@/components/Contact.jsx";
+import Contact from "@/components/contact/Contact.jsx";
 
 export default function Home() {
   return (

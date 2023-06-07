@@ -1,0 +1,118 @@
+.contactBackground {
+  position: relative;
+  background-color: var(--background-light);
+  overflow: hidden;
+  color: var(--text-dark);
+  padding-block-start: 7rem;
+}
+
+.shapedivider {
+  composes: shapedivider from "@/styles/ShapeDivider.module.css";
+}
+
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+}
+
+.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 4rem;
+}
+
+.light img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  object-fit: contain;
+  z-index: 1;
+  align-self: center;
+}
+
+.animalGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.blob {
+  composes: blob from "@/styles/Blob.module.css";
+}
+
+.contactStack,
+.contactInfoStack {
+  composes: stack from "@/styles/Stack.module.css";
+  justify-content: center;
+  --stack-space: var(--s2);
+}
+
+.contactInfoStack > * {
+  --stack-space: var(--s-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--s-1);
+}
+
+.contactInfoStack a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+
+.contactInfoStack a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+
+.contactStack form {
+  background-color: var(--background-light);
+  padding-inline: var(--s2);
+  border-radius: 20px;
+}
+
+.contactInfo {
+  padding-inline: var(--s2);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.borderTitle {
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background-color: var(--background-light);
+  padding-inline: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+input:focus + .borderTitle,
+textarea:focus + .borderTitle {
+  font-size: 0.8rem;
+  top: -6px;
+}
+
+.buttonAndLoader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success {
+  color: var(--secondary);
+}
+
+.error {
+  color: indianred;
+}
+
+@media (max-width: 650px) {
+  .contactStack {
+    --stack-justify: center;
+  }
+}
