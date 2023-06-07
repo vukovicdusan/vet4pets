@@ -1,0 +1,81 @@
+.heroBackground {
+  position: relative;
+  background-color: var(--primary);
+}
+.heroSwitcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+  padding-block: var(--s3);
+}
+
+.heroStackLeft {
+  composes: stack from "@/styles/Stack.module.css";
+  --stack-justify: center;
+}
+
+.heroStackLeft > * + * {
+  --stack-space: var(--s2);
+  color: var(--text-light);
+}
+
+.shapedivider {
+  composes: shapedivider from "@/styles/ShapeDivider.module.css";
+}
+
+.shapedivider svg {
+  height: 50px;
+}
+
+.shapedivider svg path {
+  fill: var(--background-light);
+}
+
+.heroStackLeft div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heroStackLeft div p {
+  color: var(--text-light);
+  /* line-height: 3px; */
+}
+
+.heroStackLeft span {
+  width: 4rem;
+  height: 4px;
+  background-color: var(--secondary);
+}
+
+.stackException {
+  composes: stackException from "@/styles/Stack.module.css";
+  --stack-space: 0;
+}
+
+.heroStackRight {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.heroSvg {
+  composes: blob from "@/styles/Blob.module.css";
+}
+
+.heroStackRight img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.animationContainer {
+  overflow: hidden;
+  line-height: inherit;
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+}
+
+.animationContainer button {
+  transform: translateY(300px);
+}
