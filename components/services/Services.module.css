@@ -1,0 +1,147 @@
+.serviceBackground {
+  background-color: var(--background-dark);
+  position: relative;
+  padding-block-start: 7rem;
+}
+
+.shapedivider {
+  composes: shapedivider from "@/styles/ShapeDivider.module.css";
+}
+
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+  gap: var(--s3);
+  flex-direction: row-reverse;
+}
+
+.switcher > * {
+  flex-basis: calc((45rem - 100%) * 999);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  color: var(--text-dark);
+}
+
+.switcher img {
+  object-fit: contain;
+}
+
+.servicesGrid {
+  composes: grid from "@/styles/Grid.module.css";
+  grid-gap: 2rem;
+}
+
+.serviceStack {
+  composes: stack from "@/styles/Stack.module.css";
+}
+
+.serviceStack > * {
+  --stack-space: var(--s5);
+}
+
+.serviceBox {
+  position: relative;
+  composes: box from "@/styles/Box.module.css";
+  background-image: url("../../public/img/services/parot.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: var(--s2);
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px rgb(0 0 0 / 20%);
+}
+
+.serviceBox:nth-child(2),
+.serviceBox:nth-child(12) {
+  background-image: url("../../public/img/services/puddle.jpg");
+}
+
+.serviceBox:nth-child(3) {
+  background-image: url("../../public/img/services/dog1.jpg");
+}
+
+.serviceBox:nth-child(4),
+.serviceBox:nth-child(13) {
+  background-image: url("../../public/img/services/fish.jpg");
+}
+
+.serviceBox:nth-child(5),
+.serviceBox:nth-child(14) {
+  background-image: url("../../public/img/services/hamster.jpg");
+}
+
+.serviceBox:nth-child(6) {
+  background-image: url("../../public/img/services/cat.jpg");
+}
+
+.serviceBox:nth-child(7),
+.serviceBox:nth-child(15) {
+  background-image: url("../../public/img/services/rabbit.jpg");
+}
+
+.serviceBox:nth-child(8),
+.serviceBox:nth-child(16) {
+  background-image: url("../../public/img/services/sosage.jpg");
+}
+
+.serviceBox:nth-child(9) {
+  background-image: url("../../public/img/services/turtle.jpg");
+}
+
+.serviceBox:nth-child(10) {
+  background-image: url("../../public/img/services/vrabac.jpg");
+}
+
+.serviceBox:nth-child(11) {
+  background-image: url("../../public/img/services/cat2.jpg");
+}
+
+.serviceBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.8);
+  z-index: 0;
+  backdrop-filter: blur(3px);
+}
+
+.innerBox {
+  composes: stack from "@/styles/Stack.module.css";
+  position: relative;
+  z-index: 1;
+}
+
+.innerBox img {
+  object-fit: contain;
+}
+
+.animalGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.blob {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.animalGrid img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.blob {
+  composes: blob from "@/styles/Blob.module.css";
+}
