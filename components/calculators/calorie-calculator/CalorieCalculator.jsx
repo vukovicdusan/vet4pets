@@ -8,16 +8,18 @@ import Underline from "../../Underline";
 import bcs from "@/public/img/bcs_chart_dog.jpg";
 import useCalculator from "@/hooks/useCalculator";
 import useInput from "@/hooks/useInput";
+import useAccordion from "@/hooks/useAccordion";
 
 const CalorieCalculator = () => {
+  const accordionRef = useRef();
   const [calculateCalories, calories] = useCalculator();
+  const [, accordionHandler] = useAccordion();
   const [inputValues, changeHandler] = useInput({
     weight: "",
     signalment: "1.6",
     activity: "1",
     bcs: "1",
   });
-  const [accordionOpen, setAccordionOpen] = useState(false);
 
   const inputHandler = (e) => {
     changeHandler(e);
@@ -26,22 +28,6 @@ const CalorieCalculator = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     calculateCalories(inputValues);
-  };
-
-  //REFS
-  const accordionRef = useRef();
-
-  //ACCORDION
-  const openImgAccordion = (e) => {
-    e.preventDefault();
-    !accordionOpen ? setAccordionOpen(true) : setAccordionOpen(false);
-
-    if (accordionRef.current.style.maxHeight) {
-      accordionRef.current.style.maxHeight = null;
-    } else {
-      accordionRef.current.style.maxHeight =
-        accordionRef.current.scrollHeight + "px";
-    }
   };
 
   return (
@@ -108,7 +94,7 @@ const CalorieCalculator = () => {
               <label htmlFor="signalment">
                 Body condition score{" "}
                 <svg
-                  onClick={openImgAccordion}
+                  onClick={() => accordionHandler(accordionRef)}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"

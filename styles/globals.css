@@ -288,7 +288,11 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border-block-end: 1px solid var(--primary);
-  -webkit-text-fill-color: inherit;
+  -webkit-text-fill-color: none;
+}
+
+input:-internal-autofill-selected {
+  background-color: var(--background-light) !important;
 }
 
 ::placeholder {

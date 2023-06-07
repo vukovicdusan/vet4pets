@@ -55,13 +55,13 @@ const useCalculator = () => {
         break;
       case totalDose > 34.02 && totalDose < 45:
         prognosis =
-          "Vaš pas može imati tahikardiju(moguće opasno, rapidno ubrzanje rada srca).";
+          "Vaš pas može imati ubrzani rad srca(tahiaritmiju), dijareju i povraćanje. Potražite stručnu pomoć.";
         break;
       case totalDose > 45 && totalDose < 55.01:
-        prognosis = "Vaš pas može dobiti konvulzije.";
+        prognosis = "Vaš pas može dobiti konvulzije. Potražite stručnu pomoć.";
         break;
       case totalDose > 55.01:
-        prognosis = "Vaš pas od ove doze može umreti.";
+        prognosis = "Vaš pas od ove doze može umreti. Potražite stručnu pomoć.";
         break;
       default:
         "";

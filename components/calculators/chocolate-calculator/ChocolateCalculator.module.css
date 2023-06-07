@@ -9,11 +9,20 @@
 }
 
 .infoStack > * + * {
+  --stack-space: var(--s0);
+}
+
+.resultStack > * + * {
   --stack-space: var(--s-2);
 }
 
 .center {
   composes: center from "@/styles/Center.module.css";
+}
+
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+  margin-block-start: var(--s2);
 }
 
 .hiddenBox {
@@ -31,6 +40,7 @@
   transform: translateX(0);
   text-align: center;
   opacity: 1;
+  max-inline-size: 25rem;
 }
 
 .inputWrapper {
@@ -44,4 +54,16 @@
 .description {
   color: var(--background-dark);
   font-size: var(--s-1);
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: orange;
+}
+
+.red {
+  color: red;
 }
