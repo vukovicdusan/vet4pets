@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/hero/Hero.jsx";
 import Services from "@/components/Services.jsx";
-import Testimonials from "@/components/Testimonials.jsx";
+import Testimonials from "@/components/testimonials/Testimonials.jsx";
 import AboutMe from "@/components/AboutMe.jsx";
 import Contact from "@/components/Contact.jsx";
 
