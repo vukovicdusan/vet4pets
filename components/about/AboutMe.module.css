@@ -1,0 +1,29 @@
+.background {
+  background-color: var(--primary);
+  position: relative;
+  padding-block-start: 7rem;
+}
+
+.background h2,
+.background p {
+  color: var(--text-light);
+}
+
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+}
+
+.stack {
+  composes: stack from "@/styles/Stack.module.css";
+}
+.switcher img {
+  object-fit: cover;
+}
+
+.shapedivider {
+  composes: shapedivider from "@/styles/ShapeDivider.module.css";
+}
+
+.shapedivider svg path {
+  fill: var(--background-light);
+}
