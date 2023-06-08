@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+  gap: var(--s0);
+  margin-block: var(--s2);
+}
+.navBtn {
+  background-color: transparent;
+  color: var(--primary);
+}

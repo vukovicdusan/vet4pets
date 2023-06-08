@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./AnimationContainer.module.css";
 
 const AnimationContainer = (props) => {
-  let animationRef = React.useRef();
+  let animationRef = useRef();
   const [show, setShow] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let config = {
       threshold: 0.4,
     };
@@ -24,7 +24,7 @@ const AnimationContainer = (props) => {
 
   return (
     <div className={styles.animationContainer} ref={animationRef}>
-      <div className={show ? `${styles.show}` : `${styles.hidden}`}>
+      <div className={`${show ? styles.show : styles.hidden}`}>
         {props.children}
       </div>
     </div>

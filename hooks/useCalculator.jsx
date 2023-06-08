@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const useCalculator = () => {
   const [calories, setCalories] = useState("");
+  const [liquid, setLiquid] = useState("");
   const [toxicity, setToxicity] = useState({ dose: 0, prognosis: "" });
 
   const calculateCalories = (params) => {
@@ -70,7 +71,19 @@ const useCalculator = () => {
     setToxicity({ dose: totalDose, prognosis: prognosis });
   };
 
-  return [calculateCalories, calories, calculateChocolate, toxicity];
+  const calculateLiquid = (input) => {
+    const { weight, activity } = input;
+    setLiquid(weight * activity);
+  };
+
+  return [
+    calculateCalories,
+    calories,
+    calculateChocolate,
+    toxicity,
+    calculateLiquid,
+    liquid,
+  ];
 };
 
 export default useCalculator;

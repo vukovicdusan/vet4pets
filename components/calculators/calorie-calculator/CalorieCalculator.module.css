@@ -27,6 +27,7 @@
   transform: translateX(0);
   opacity: 1;
   max-inline-size: 25rem;
+  text-align: center;
 }
 
 .inputWrapper {

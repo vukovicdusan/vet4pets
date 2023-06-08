@@ -9,11 +9,6 @@
   composes: wrap from "@/styles/Wrap.module.css";
 }
 
-/* .headerLogo,
-.desktopNav a {
-	color: var(--text-dark);
-} */
-
 .headerLogo {
   display: flex;
   flex-direction: column;
@@ -37,7 +32,6 @@
 
 .dropdownContent {
   display: flex;
-  gap: var(--s0);
   justify-content: center;
   width: 100%;
   position: fixed;
@@ -63,20 +57,12 @@
 }
 
 .dropdownContent li {
-  position: relative;
-}
-.dropdownContent li::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  right: -10px;
-  background-color: var(--secondary);
-  top: 0;
+  border-inline-end: 1px solid var(--secondary);
+  padding-inline: var(--s0);
 }
 
-.dropdownContent li:last-child::after {
-  content: none;
+.dropdownContent li:last-child {
+  border-inline-end: none;
 }
 
 @media (max-width: 550px) {

@@ -1,0 +1,39 @@
+.stack {
+  composes: stack from "@/styles/Stack.module.css";
+  --stack-align: center;
+  color: var(--text-dark);
+}
+
+.stack > * + * {
+  --stack-space: var(--s2);
+}
+
+.center {
+  composes: center from "@/styles/Center.module.css";
+}
+
+.hiddenBox {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  padding-inline: var(--s4);
+  /* height: 65px; */
+}
+
+.box {
+  composes: box from "@/styles/Box.module.css";
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transform: translateX(0);
+  opacity: 1;
+  max-inline-size: 25rem;
+  text-align: center;
+}
+
+.inputWrapper {
+  composes: inputWrapper from "@/styles/InputWrapper.module.css";
+}
+
+.borderTitle {
+  composes: borderTitle from "@/styles/InputWrapper.module.css";
+}
