@@ -4,10 +4,10 @@ import Wrapper from "../layout/Wrapper";
 import Underline from "../Underline";
 import Image from "next/image";
 import styles from "./Services.module.css";
-
 import animal from "@/public/img/korgey.png";
 import Title from "../Title";
 import { services } from "./services-content";
+import AnimationContainer from "../animation-container/AnimationContainer";
 
 const Services = () => {
   const [servicesAmount, setServicesAmount] = useState(6);
@@ -34,12 +34,19 @@ const Services = () => {
                   <Underline position={"start"} color={"secondary"}></Underline>
                 </div>
               </Title>
-              <div className={styles.animalGrid}>
-                <div className={styles.blob}>
-                  <div className={styles.shape} />
+              <AnimationContainer>
+                <div className={styles.animalGrid}>
+                  <div className={styles.blob}>
+                    <div className={styles.shape} />
+                  </div>
+                  <Image
+                    src={animal}
+                    alt="pas"
+                    width={600}
+                    height={350}
+                  ></Image>
                 </div>
-                <Image src={animal} alt="pas" width={600} height={350}></Image>
-              </div>
+              </AnimationContainer>
             </div>
             <div className={styles.servicesGrid}>
               {services.slice(0, servicesAmount).map((service, index) => (

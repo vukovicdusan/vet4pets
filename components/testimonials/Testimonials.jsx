@@ -10,6 +10,7 @@ import animal from "@/public/img/blue-cat.png";
 import Title from "../Title";
 import { testimonials } from "./testimonials-content";
 import useReel from "@/hooks/useReel";
+import AnimationContainer from "../animation-container/AnimationContainer";
 
 const Testimonials = () => {
   const [
@@ -41,12 +42,19 @@ const Testimonials = () => {
                 <Underline position={"start"} color={"secondary"}></Underline>
               </div>
             </Title>
-            <div className={styles.animalGrid}>
-              <div className={styles.blob}>
-                <div className={styles.shape} />
+            <AnimationContainer>
+              <div className={styles.animalGrid}>
+                <div className={styles.blob}>
+                  <div className={styles.shape} />
+                </div>
+                <Image
+                  src={animal}
+                  alt="macka"
+                  width={600}
+                  height={350}
+                ></Image>
               </div>
-              <Image src={animal} alt="macka" width={600} height={350}></Image>
-            </div>
+            </AnimationContainer>
           </div>
 
           <div className={styles.reel}>

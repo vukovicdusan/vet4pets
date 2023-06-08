@@ -1,14 +1,33 @@
 .calculatorsCtaBackground {
   position: relative;
+  color: var(--text-dark);
 }
 
 .switcher {
   composes: switcher from "@/styles/Switcher.module.css";
   gap: var(--s3);
+  align-items: center;
+  /* margin-block-start: var(--s4); */
 }
 
 .switcher > * {
   flex-basis: calc((40rem - 100%) * 999);
+}
+
+.switcherRowReverse {
+  flex-direction: row-reverse;
+}
+
+.stack {
+  composes: stack from "@/styles/Stack.module.css";
+}
+
+.stack > * + * {
+  --stack-space: var(--s4);
+}
+
+.innerStack > * + * {
+  --stack-space: var(--s2);
 }
 
 .title {
@@ -57,4 +76,13 @@
 
 .shapedivider svg path {
   fill: var(--primary);
+}
+
+.linkBtn {
+  composes: linkBtn from "@/styles/LinkBtn.module.css";
+}
+
+.ctaImg {
+  object-fit: contain;
+  margin-inline: auto;
 }

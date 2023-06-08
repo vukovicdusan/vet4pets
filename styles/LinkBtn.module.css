@@ -1,0 +1,29 @@
+.linkBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  color: var(--primary);
+}
+
+.linkBtn span {
+  width: 1rem;
+  height: 4px;
+  background-color: var(--secondary);
+  transition: width 0.2s ease;
+}
+
+.linkBtn:hover span {
+  width: 2rem;
+}
+
+.linkBtn svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--secondary);
+  transition: transform 0.6s ease;
+  transition-delay: 0.1s;
+}
+
+.linkBtn:hover svg {
+  transform: translateX(15px);
+}

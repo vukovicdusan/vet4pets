@@ -6,6 +6,7 @@ import styles from "./Hero.module.css";
 import dog from "../../public/img/akita.png";
 import { animationCaller } from "./heroHelpers";
 import Link from "next/link";
+import AnimationContainer from "../animation-container/AnimationContainer";
 
 const Hero = () => {
   let titleRef = useRef();
@@ -52,22 +53,16 @@ const Hero = () => {
                     Zakažite pregled
                   </a>
                 </button>
-                <button ref={btnRef} className="button">
-                  <Link
-                    className="link-exception"
-                    href={"./kalkulator-kalorija"}
-                  >
-                    Kalkulator Kalorija
-                  </Link>
-                </button>
               </div>
             </div>
-            <div className={styles.heroStackRight}>
-              <div className={styles.heroSvg}>
-                <div className={styles.shape} />
+            <AnimationContainer>
+              <div className={styles.heroStackRight}>
+                <div className={styles.heroSvg}>
+                  <div className={styles.shape} />
+                </div>
+                <Image width={600} height={350} src={dog} alt="dog"></Image>
               </div>
-              <Image width={600} height={350} src={dog} alt="dog"></Image>
-            </div>
+            </AnimationContainer>
           </div>
         </Wrapper>
       </Region>

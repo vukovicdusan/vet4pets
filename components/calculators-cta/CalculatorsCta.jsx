@@ -4,8 +4,12 @@ import Title from "../Title";
 import Wrapper from "../layout/Wrapper";
 import Region from "../layout/Region";
 import animal from "@/public/img/blue-cat.png";
+import chocolate from "@/public/img/chocolate.png";
+import petBowl from "@/public/img/pet-bowl.png";
+import AnimationContainer from "../animation-container/AnimationContainer";
 import styles from "./CalculatorsCta.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const CalculatorsCta = () => {
   return (
@@ -22,18 +26,106 @@ const CalculatorsCta = () => {
       </div>
       <Region>
         <Wrapper>
-          <div className={styles.switcher}>
-            <Title>
-              <div className={styles.title}>
-                <h2 className="section-title">Pogledajte naše kalkulatore.</h2>
-                <Underline position={"start"} color={"secondary"}></Underline>
+          <div className={styles.stack}>
+            <div className={`${styles.switcher} ${styles.switcherRowReverse}`}>
+              <div>
+                <Title>
+                  <div className={styles.title}>
+                    <h2 className="section-title">
+                      Isprobajte naše kalkulatore.
+                    </h2>
+                    <Underline
+                      position={"start"}
+                      color={"secondary"}
+                    ></Underline>
+                  </div>
+                </Title>
               </div>
-            </Title>
-            <div className={styles.animalGrid}>
-              <div className={styles.blob}>
-                <div className={styles.shape} />
+              <div>
+                <AnimationContainer>
+                  <div className={styles.animalGrid}>
+                    <div className={styles.blob}>
+                      <div className={styles.shape} />
+                    </div>
+                    <Image
+                      src={animal}
+                      alt="macka"
+                      width={600}
+                      height={350}
+                    ></Image>
+                  </div>
+                </AnimationContainer>
               </div>
-              <Image src={animal} alt="macka" width={600} height={350}></Image>
+            </div>
+            <div className={styles.stack}>
+              <div className={styles.switcher}>
+                <div className={`${styles.stack} ${styles.innerStack}`}>
+                  <p>
+                    Kao i nama, psima je potrebna energija da bi funkcionisali
+                    kako treba. Zbog toga, njihov dnevni kalorijski unos treba
+                    da bude dovoljan da održi psa zdravim i u odgovarajućoj
+                    fizičkoj i mentalnoj kondiciji. Energija u vidu kalorija je
+                    tu da zadovolji osnovne potrebe tela u pogledu opšteg
+                    funkcionisanja i fizičke aktivnosti. Izračunajte dnevne
+                    potrebe vašeg psa.
+                  </p>
+
+                  <Link
+                    className={styles.linkBtn}
+                    href={"./kalkulator-kalorija"}
+                  >
+                    <span></span>Kalkulator Kalorija
+                    <svg className={styles.icon}>
+                      <use xlinkHref={"./img/sprite.svg#arrow-right"}></use>
+                    </svg>
+                  </Link>
+                </div>
+                <div>
+                  <AnimationContainer>
+                    <Image
+                      className={styles.ctaImg}
+                      src={petBowl}
+                      alt="hrana za pse"
+                      width={200}
+                      height={200}
+                    ></Image>
+                  </AnimationContainer>
+                </div>
+              </div>
+              <div
+                className={`${styles.switcher} ${styles.switcherRowReverse}`}
+              >
+                <div className={`${styles.stack} ${styles.innerStack}`}>
+                  <p>
+                    Naš kalkulator vam može pomoći da utvrdite da li je količina
+                    čokolade koju je vaš ljubimac pojeo opasna za njega.
+                    Čokolada je veoma otrovna za pse. Preciznije teobromin koji
+                    čokolada sadrži. Psi ne bi trebali da jedu ni malo čokolade,
+                    ali ako se to ipak dogodi da li ima mesta za paniku?
+                    Saznajte pomoću našeg kalkulatora.
+                  </p>
+                  <Link
+                    className={styles.linkBtn}
+                    href={"./kalkulator-cokolada"}
+                  >
+                    <span></span> Kalkulator za čokoladu{" "}
+                    <svg>
+                      <use xlinkHref={"./img/sprite.svg#arrow-right"}></use>
+                    </svg>
+                  </Link>
+                </div>
+                <div>
+                  <AnimationContainer>
+                    <Image
+                      className={styles.ctaImg}
+                      src={chocolate}
+                      alt="macka"
+                      width={200}
+                      height={200}
+                    ></Image>
+                  </AnimationContainer>
+                </div>
+              </div>
             </div>
           </div>
         </Wrapper>

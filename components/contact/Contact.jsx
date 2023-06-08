@@ -8,6 +8,7 @@ import { sendContactForm } from "../../lib/api";
 import hamster from "@/public/img/hamster.png";
 import Title from "../Title";
 import Loader from "../Loader";
+import AnimationContainer from "../animation-container/AnimationContainer";
 
 const Contact = () => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -77,17 +78,19 @@ const Contact = () => {
           </Title>
           <div className={styles.switcher}>
             <div className={styles.light}>
-              <div className={styles.animalGrid}>
-                <div className={styles.blob}>
-                  <div className={styles.shape} />
+              <AnimationContainer>
+                <div className={styles.animalGrid}>
+                  <div className={styles.blob}>
+                    <div className={styles.shape} />
+                  </div>
+                  <Image
+                    src={hamster}
+                    alt="hrcak"
+                    width={450}
+                    height={250}
+                  ></Image>
                 </div>
-                <Image
-                  src={hamster}
-                  alt="hrcak"
-                  width={450}
-                  height={250}
-                ></Image>
-              </div>
+              </AnimationContainer>
             </div>
 
             <div className={styles.contactStack}>
