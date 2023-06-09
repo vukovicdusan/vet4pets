@@ -1,18 +1,20 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Region from "../../components/layout/Region";
 import Wrapper from "../../components/layout/Wrapper";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 import dog from "../../public/img/akita.png";
 import { animationCaller } from "./heroHelpers";
-import Link from "next/link";
 import AnimationContainer from "../animation-container/AnimationContainer";
+import useLoading from "@/hooks/useLoading";
 
 const Hero = () => {
   let titleRef = useRef();
   let subTitleRef = useRef();
   let lineRef = useRef();
   let btnRef = useRef();
+
+  const [loadingHandler, isLoading] = useLoading();
 
   animationCaller(titleRef, subTitleRef, lineRef, btnRef);
 
@@ -60,7 +62,14 @@ const Hero = () => {
                 <div className={styles.heroSvg}>
                   <div className={styles.shape} />
                 </div>
-                <Image width={600} height={350} src={dog} alt="dog"></Image>
+                <Image
+                  width={600}
+                  height={350}
+                  src={dog}
+                  alt="dog"
+                  className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                  onLoad={loadingHandler}
+                ></Image>
               </div>
             </AnimationContainer>
           </div>

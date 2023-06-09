@@ -6,8 +6,10 @@ import about from "../../public/img/about.jpg";
 import Wrapper from "../layout/Wrapper";
 import Underline from "../Underline";
 import Title from "../Title";
+import useLoading from "@/hooks/useLoading";
 
 const AboutMe = () => {
+  const [loadingHandler, isLoading] = useLoading();
   return (
     <div className={styles.background}>
       <div className={styles.shapedivider}>
@@ -32,7 +34,14 @@ const AboutMe = () => {
 
             <div className={styles.switcher}>
               <div>
-                <Image src={about} width={350} height={450} alt="sale"></Image>
+                <Image
+                  src={about}
+                  width={350}
+                  height={450}
+                  alt="Sale"
+                  className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                  onLoad={loadingHandler}
+                ></Image>
               </div>
               <div className={styles.stack}>
                 <p>

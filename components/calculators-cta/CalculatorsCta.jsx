@@ -10,8 +10,10 @@ import AnimationContainer from "../animation-container/AnimationContainer";
 import styles from "./CalculatorsCta.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import useLoading from "@/hooks/useLoading";
 
 const CalculatorsCta = () => {
+  const [loadingHandler, isLoading] = useLoading();
   return (
     <div className={styles.calculatorsCtaBackground}>
       <div className={styles.shapedivider}>
@@ -52,6 +54,8 @@ const CalculatorsCta = () => {
                       alt="macka"
                       width={600}
                       height={350}
+                      className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                      onLoad={loadingHandler}
                     ></Image>
                   </div>
                 </AnimationContainer>
@@ -83,11 +87,12 @@ const CalculatorsCta = () => {
                 <div>
                   <AnimationContainer>
                     <Image
-                      className={styles.ctaImg}
                       src={petBowl}
                       alt="hrana za pse"
                       width={200}
                       height={200}
+                      className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                      onLoad={loadingHandler}
                     ></Image>
                   </AnimationContainer>
                 </div>
@@ -117,11 +122,14 @@ const CalculatorsCta = () => {
                 <div>
                   <AnimationContainer>
                     <Image
-                      className={styles.ctaImg}
                       src={chocolate}
                       alt="macka"
                       width={200}
                       height={200}
+                      className={` ${styles.ctaImg} faded ${
+                        !isLoading ? "fadeIn" : ""
+                      }`}
+                      onLoad={loadingHandler}
                     ></Image>
                   </AnimationContainer>
                 </div>

@@ -11,6 +11,7 @@ import Title from "../Title";
 import { testimonials } from "./testimonials-content";
 import useReel from "@/hooks/useReel";
 import AnimationContainer from "../animation-container/AnimationContainer";
+import useLoading from "@/hooks/useLoading";
 
 const Testimonials = () => {
   const [
@@ -20,6 +21,7 @@ const Testimonials = () => {
     rightButtonDisabled,
     slidesNum,
   ] = useReel();
+  const [loadingHandler, isLoading] = useLoading();
 
   return (
     <div className={styles.testimonialsBackground}>
@@ -52,6 +54,8 @@ const Testimonials = () => {
                   alt="macka"
                   width={600}
                   height={350}
+                  className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                  onLoad={loadingHandler}
                 ></Image>
               </div>
             </AnimationContainer>

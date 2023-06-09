@@ -8,9 +8,11 @@ import animal from "@/public/img/korgey.png";
 import Title from "../Title";
 import { services } from "./services-content";
 import AnimationContainer from "../animation-container/AnimationContainer";
+import useLoading from "@/hooks/useLoading";
 
 const Services = () => {
   const [servicesAmount, setServicesAmount] = useState(6);
+  const [loadingHandler, isLoading] = useLoading();
 
   return (
     <div className={styles.serviceBackground}>
@@ -44,6 +46,8 @@ const Services = () => {
                     alt="pas"
                     width={600}
                     height={350}
+                    className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                    onLoad={loadingHandler}
                   ></Image>
                 </div>
               </AnimationContainer>

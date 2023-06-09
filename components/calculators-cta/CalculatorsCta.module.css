@@ -82,7 +82,7 @@
   composes: linkBtn from "@/styles/LinkBtn.module.css";
 }
 
-.ctaImg {
+.calculatorsCtaBackground img {
   object-fit: contain;
   margin-inline: auto;
 }

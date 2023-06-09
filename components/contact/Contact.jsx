@@ -9,6 +9,7 @@ import hamster from "@/public/img/hamster.png";
 import Title from "../Title";
 import Loader from "../Loader";
 import AnimationContainer from "../animation-container/AnimationContainer";
+import useLoading from "@/hooks/useLoading";
 
 const Contact = () => {
   const [hasMounted, setHasMounted] = useState(false);
@@ -18,6 +19,7 @@ const Contact = () => {
     error: false,
     loading: false,
   });
+  const [loadingHandler, isLoading] = useLoading();
 
   useEffect(() => {
     setHasMounted(true);
@@ -88,6 +90,8 @@ const Contact = () => {
                     alt="hrcak"
                     width={450}
                     height={250}
+                    className={`faded ${!isLoading ? "fadeIn" : ""}`}
+                    onLoad={loadingHandler}
                   ></Image>
                 </div>
               </AnimationContainer>
