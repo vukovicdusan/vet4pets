@@ -79,10 +79,10 @@ const SizeCalculator = () => {
         </form>
         <div className={`${styles.infoStack} ${styles.stack}`}>
           <p>
-            Uz ovaj kalkulator možete predvideti koliko će porasti vaš štenac
-            ukoliko je mešanac kojeg ste usvojili sa ulice ili udomili. Može se
-            reći da psi dostižu svoju punu veličinu već sa 12 meseci, a koliki
-            će vaš ljubimac tada biti, otkriće vam naš kalkulator.
+            Uz ovaj kalkulator možete predvideti koliko će porasti vaš štenac,
+            posebno ukoliko je mešanac kojeg ste usvojili sa ulice ili udomili.
+            Može se reći da psi dostižu svoju punu veličinu već sa 12 meseci, a
+            koliki će vaš ljubimac tada biti, otkriće vam naš kalkulator.
           </p>
         </div>
       </div>

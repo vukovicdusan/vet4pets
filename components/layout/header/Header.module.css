@@ -33,6 +33,7 @@
 .dropdownContent {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   position: fixed;
   top: 65px;
@@ -68,5 +69,11 @@
 @media (max-width: 550px) {
   .headerWrap {
     --wrap-justify: center;
+  }
+}
+
+@media (max-width: 419px) {
+  .dropdownContent {
+    top: 115px;
   }
 }
