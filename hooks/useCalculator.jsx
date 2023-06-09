@@ -4,6 +4,7 @@ const useCalculator = () => {
   const [calories, setCalories] = useState("");
   const [liquid, setLiquid] = useState("");
   const [toxicity, setToxicity] = useState({ dose: 0, prognosis: "" });
+  const [size, setSize] = useState(0);
 
   const calculateCalories = (params) => {
     const bcsValues = {
@@ -76,6 +77,33 @@ const useCalculator = () => {
     setLiquid(weight * activity);
   };
 
+  const calculateSize = (input) => {
+    //Adult weight = (Puppy weight / Puppy age in weeks) × 52
+    const { age, weight } = input;
+    const calculatedWeight = (weight / (age * 4)) * 52;
+    let calculatedSize;
+    switch (true) {
+      case calculatedWeight < 5.4:
+        calculatedSize = "mini";
+        break;
+      case calculatedWeight > 5.4 && calculatedWeight < 10:
+        calculatedSize = "mali";
+        break;
+      case calculatedWeight > 10 && calculatedWeight < 25.9:
+        calculatedSize = "srednji";
+        break;
+      case calculatedWeight > 25.9 && calculatedWeight < 44.9:
+        calculatedSize = "veliki";
+        break;
+      case calculatedWeight > 44.9:
+        calculatedSize = "džinovski";
+        break;
+      default:
+        "";
+    }
+    setSize({ weight: calculatedWeight, size: calculatedSize });
+  };
+
   return [
     calculateCalories,
     calories,
@@ -83,6 +111,8 @@ const useCalculator = () => {
     toxicity,
     calculateLiquid,
     liquid,
+    calculateSize,
+    size,
   ];
 };
 

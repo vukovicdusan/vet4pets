@@ -1,0 +1,56 @@
+.stack {
+  composes: stack from "@/styles/Stack.module.css";
+  --stack-align: center;
+  color: var(--text-dark);
+}
+
+.stack > * + * {
+  --stack-space: var(--s2);
+}
+
+.infoStack > * + * {
+  --stack-space: var(--s0);
+}
+
+.resultStack > * + * {
+  --stack-space: var(--s-2);
+}
+
+.center {
+  composes: center from "@/styles/Center.module.css";
+}
+
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+  margin-block-start: var(--s2);
+}
+
+.hiddenBox {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  padding-inline: var(--s4);
+  /* height: 65px; */
+}
+
+.box {
+  composes: box from "@/styles/Box.module.css";
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transform: translateX(0);
+  text-align: center;
+  opacity: 1;
+  max-inline-size: 25rem;
+}
+
+.inputWrapper {
+  composes: inputWrapper from "@/styles/InputWrapper.module.css";
+}
+
+.borderTitle {
+  composes: borderTitle from "@/styles/InputWrapper.module.css";
+}
+
+.bold {
+  font-family: var(--font-bold);
+}

@@ -71,7 +71,8 @@ const CalculatorsCta = () => {
                     fizičkoj i mentalnoj kondiciji. Energija u vidu kalorija je
                     tu da zadovolji osnovne potrebe tela u pogledu opšteg
                     funkcionisanja i fizičke aktivnosti. Izračunajte dnevne
-                    potrebe vašeg psa.
+                    potrebe vašeg psa. A tu je i kalkulator za obračunavanje
+                    unosa tečnosti.
                   </p>
 
                   <Link

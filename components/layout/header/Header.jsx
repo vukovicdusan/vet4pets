@@ -40,7 +40,12 @@ const Header = () => {
                     </li>
                     <li>
                       <Link href={"./kalkulator-cokolada"}>
-                        Kalkulator Trovanja Čokoladom
+                        Kalkulator trovanja čokoladom
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"./kalkulator-rast"}>
+                        Kalkulator veličine
                       </Link>
                     </li>
                   </ul>

@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./ChocolateCalculator.module.css";
-import Region from "@/components/layout/Region";
-import Wrapper from "@/components/layout/Wrapper";
 import Title from "@/components/Title";
 import Underline from "@/components/Underline";
 import useInput from "@/hooks/useInput";
@@ -14,10 +12,6 @@ const ChocolateCalculator = () => {
     chocolateType: 0.0882,
   });
   const [, , calculateChocolate, toxicity] = useCalculator();
-
-  const inputHandler = (e) => {
-    changeHandler(e);
-  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -44,7 +38,7 @@ const ChocolateCalculator = () => {
               required
               title="UNESITE VALIDNU KILAŽU"
               pattern="\d+"
-              onChange={inputHandler}
+              onChange={(e) => changeHandler(e)}
             />
             <label className={styles.borderTitle} htmlFor="weight">
               Težina(kg)
@@ -60,7 +54,7 @@ const ChocolateCalculator = () => {
               required
               title="UNESITE VALIDNU KOLIČINU"
               pattern="\d+"
-              onChange={inputHandler}
+              onChange={(e) => changeHandler(e)}
             />
             <label className={styles.borderTitle} htmlFor="chocolateAmount">
               Količina čokolade(g)
@@ -68,7 +62,7 @@ const ChocolateCalculator = () => {
           </div>
           <div className={styles.inputWrapper}>
             <select
-              onChange={inputHandler}
+              onChange={(e) => changeHandler(e)}
               id="chocolateType"
               name="chocolateType"
               defaultValue={0.00882}
