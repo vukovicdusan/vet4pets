@@ -35,17 +35,17 @@ const Header = () => {
                   <ul className={styles.dropdownContent}>
                     <li>
                       <Link href={"./kalkulator-kalorija"}>
-                        Kalkulator Kalorija
+                        Kalkulator kalorija
                       </Link>
                     </li>
                     <li>
                       <Link href={"./kalkulator-cokolada"}>
-                        Kalkulator trovanja čokoladom
+                        Kalkulator za trovanje čokoladom
                       </Link>
                     </li>
                     <li>
                       <Link href={"./kalkulator-rast"}>
-                        Kalkulator veličine
+                        Kalkulator veličine psa
                       </Link>
                     </li>
                   </ul>

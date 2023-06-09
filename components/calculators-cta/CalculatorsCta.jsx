@@ -114,7 +114,7 @@ const CalculatorsCta = () => {
                     className={styles.linkBtn}
                     href={"./kalkulator-cokolada"}
                   >
-                    <span></span> Kalkulator za čokoladu{" "}
+                    <span></span> Kalkulator trovanja čokoladom{" "}
                     <svg>
                       <use xlinkHref={"./img/sprite.svg#arrow-right"}></use>
                     </svg>
