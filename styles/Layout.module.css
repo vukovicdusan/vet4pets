@@ -12,3 +12,9 @@
 .layout > *:last-child {
   flex-shrink: 0;
 }
+
+@media (max-width: 400px) {
+  .layout {
+    padding-block-start: 9.3rem;
+  }
+}
