@@ -1,7 +1,15 @@
 .header {
-  background-color: transparent;
+  background-color: var(--background-light);
   padding-block: var(--s0);
   color: var(--text-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.boxShadow {
   box-shadow: var(--box-shadow);
 }
 
@@ -64,6 +72,25 @@
 
 .dropdownContent li:last-child {
   border-inline-end: none;
+}
+@media (max-width: 768px) {
+  .dropdown:hover .dropdownContent {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .dropdown:hover .chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdownOpen .dropdownContent {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .dropdownOpen .chevron {
+    transform: rotate(0) !important;
+  }
 }
 
 @media (max-width: 550px) {

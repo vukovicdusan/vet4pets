@@ -1,6 +1,5 @@
 import Header from "./header/Header";
 import Footer from "./Footer";
-import Wrapper from "../layout/Wrapper";
 import * as styles from "../../styles/Layout.module.css";
 
 const Layout = ({ children }) => {

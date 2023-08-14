@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Wrapper from "../Wrapper";
 import * as styles from "./Header.module.css";
 import Link from "next/link";
@@ -6,9 +6,32 @@ import Image from "next/image";
 import logo from "@/public/img/logo-220.png";
 
 const Header = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [scrollHeight, setScrollHeight] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
+  const dropdownOpenHandler = () => {
+    dropdownOpen === false ? setDropdownOpen(true) : setDropdownOpen(false);
+  };
+
+  const scrollHandler = () => {
+    const currentScrollHeight = window.scrollY;
+    setScrollHeight(currentScrollHeight);
+  };
+
   return (
     <div>
-      <header className={styles.header}>
+      <header
+        className={`${styles.header} ${
+          scrollHeight > 0 ? styles.boxShadow : ""
+        }`}
+      >
         <Wrapper>
           <div className={styles.headerWrap}>
             <Link className={styles.headerLogo} href={"/"}>
@@ -25,7 +48,12 @@ const Header = () => {
                 <li>
                   <Link href={"/"}>Početna</Link>
                 </li>
-                <li className={styles.dropdown}>
+                <li
+                  onClick={dropdownOpenHandler}
+                  className={`${styles.dropdown} ${
+                    dropdownOpen ? `${styles.dropdownOpen}` : ""
+                  }`}
+                >
                   Kalkulatori
                   <span>
                     <svg className={styles.chevron}>

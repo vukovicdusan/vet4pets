@@ -1,13 +1,14 @@
 .layout {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-block-start: 5rem;
 }
 
 .layout > *:nth-child(1) {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .layout > *:last-child {
-	flex-shrink: 0;
+  flex-shrink: 0;
 }
