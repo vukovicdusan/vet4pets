@@ -2,7 +2,7 @@ import React from "react";
 import * as styles from "./AboutMe.module.css";
 import Region from "../layout/Region";
 import Image from "next/image";
-import about from "../../public/img/about.jpg";
+import about from "../../public/img/sale.jpg";
 import Wrapper from "../layout/Wrapper";
 import Underline from "../Underline";
 import Title from "../Title";
@@ -27,7 +27,7 @@ const AboutMe = () => {
           <div className={styles.stack}>
             <Title>
               <div className={styles.title}>
-                <h2>Ko smo mi?</h2>
+                <h2>O nama?</h2>
                 <Underline position={"start"} color={"secondary"}></Underline>
               </div>
             </Title>
@@ -45,21 +45,26 @@ const AboutMe = () => {
               </div>
               <div className={styles.stack}>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Reiciendis, libero. Ullam error pariatur reiciendis incidunt,
-                  asperiores ducimus dolorum iusto voluptatibus tempora maxime
-                  sequi excepturi doloribus vel nemo quae odio labore.
+                  Saša je diplomirao na fakultetu Veterinarske Medicine u
+                  Beogradu 2007.god. Iste godine nastavlja profesionalno
+                  usavrsavanje iz oblasti zdravstvene zastite kućnih ljubimaca.
+                  Staž i profesionalni angažman započinje i odrađuje na Klinici
+                  za bolesti kopitara, mesojeda i ptica, pri Veterinarskom
+                  Fakultetu u Beogradu. Za potrebe klinike napisao je radove iz
+                  oblasti Erlihioze pasa i FIP-a mačaka.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Neque debitis ullam beatae vero quaerat molestiae enim eius
-                  veniam pariatur unde eveniet quidem suscipit voluptatibus
-                  aspernatur voluptatum saepe vitae quisquam, atque, maiores
-                  blanditiis tenetur culpa, eum repudiandae inventore? Quam,
-                  necessitatibus voluptatibus.
+                  Profesionalno iskustvo nastavlja u drugim beogradskim
+                  ambulantama. Vlasnik i direktor privatne veterinarske
+                  ambulante od 2013 godine. Poseduje sertifikat iz ultrazvučne
+                  dijagnostike. Oblasti interesovanja su mu porodiljstvo i
+                  reprodukcija, ultrazvučna dijagnostika, interna veterinarska
+                  medicina, dermatologija, hirurgija i anesteziologija. Član je
+                  Udruženja veterinara Male Prakse.
                 </p>
                 <p>
-                  Saša <br /> Kosijer
+                  Dr vet. med.
+                  <br /> Saša Kosijer
                 </p>
               </div>
             </div>
