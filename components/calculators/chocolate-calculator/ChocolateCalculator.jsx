@@ -120,13 +120,6 @@ const ChocolateCalculator = () => {
             Kalkulator sabira dozu kofeina i teobromina i izračunava nivo
             toksičnosti.
           </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
-            deserunt, repellat nesciunt incidunt sit reiciendis at odit itaque
-            provident quod earum iure vel, minus enim voluptatem. Nesciunt
-            voluptatibus aperiam voluptate officiis! Inventore voluptate nobis
-            dolor, quas adipisci quam similique reprehenderit.
-          </p>
         </div>
       </div>
     </div>
