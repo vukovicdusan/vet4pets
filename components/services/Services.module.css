@@ -120,7 +120,11 @@
 
 .innerBox {
   /* composes: stack from "@/styles/Stack.module.css"; */
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
