@@ -93,7 +93,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className={styles.reelItem}>
                   <div className={styles.reelItemContent}>
-                    <h6>{testimonial.title}</h6>
+                    {/* <h6>{testimonial.title}</h6> */}
                     <p>{testimonial.content}</p>
                     <p className="bold">{testimonial.name}</p>
                   </div>
