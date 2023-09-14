@@ -119,7 +119,8 @@
 }
 
 .innerBox {
-  composes: stack from "@/styles/Stack.module.css";
+  /* composes: stack from "@/styles/Stack.module.css"; */
+  display: block;
   position: relative;
   z-index: 1;
 }
