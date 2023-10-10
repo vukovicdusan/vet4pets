@@ -56,6 +56,18 @@ const Contact = () => {
           ...contactFormData,
           message: e.target.value,
         });
+
+    switch (e.target.name) {
+      case "email":
+        setContactFormData({ ...contactFormData, email: e.target.value });
+        break;
+      case "message":
+        setContactFormData({ ...contactFormData, message: e.target.value });
+        break;
+      case "tel":
+        setContactFormData({ ...contactFormData, tel: e.target.value });
+        break;
+    }
   };
 
   return (
@@ -194,6 +206,20 @@ const Contact = () => {
                   />
                   <label className={styles.borderTitle} htmlFor="email">
                     Tvoj Mail
+                  </label>
+                </div>
+                <div className={styles.inputWrapper}>
+                  <input
+                    type="text"
+                    name="tel"
+                    id="tel"
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    pattern="[0-9]+"
+                    onChange={inputHandler}
+                  />
+                  <label className={styles.borderTitle} htmlFor="tel">
+                    Tvoj Telefon (opciono)
                   </label>
                 </div>
                 <div className={styles.inputWrapper}>
