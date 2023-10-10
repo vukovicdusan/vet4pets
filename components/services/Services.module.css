@@ -36,6 +36,7 @@
 .servicesGrid {
   composes: grid from "@/styles/Grid.module.css";
   grid-gap: 2rem;
+  width: 100%;
 }
 
 .serviceStack {
