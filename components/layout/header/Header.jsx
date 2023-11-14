@@ -41,6 +41,7 @@ const Header = () => {
                 height={50}
                 className={logo}
                 alt={logo}
+                priority
               ></Image>
             </Link>
             <nav className={styles.desktopNav}>
