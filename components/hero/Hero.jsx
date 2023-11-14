@@ -69,6 +69,7 @@ const Hero = () => {
                   alt="dog"
                   className={`faded ${!isLoading ? "fadeIn" : ""}`}
                   onLoad={loadingHandler}
+                  priority
                 ></Image>
               </div>
             </AnimationContainer>
