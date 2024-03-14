@@ -1,9 +1,12 @@
 .heroH1 {
   font-size: var(--s0);
+  font-family: var(--font-regular), Times, serif;
+  font-weight: lighter;
 }
 
 .heroTitle {
   font-size: var(--s4);
+  font-family: var(--font-bold), Times, serif;
 }
 
 @media(max-width: 450px){
