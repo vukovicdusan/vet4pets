@@ -37,11 +37,15 @@ const Hero = () => {
               <div className={styles.animationContainer}>
                 <div ref={lineRef}>
                   <span></span>
-                  <p>Veterinarska Klinika Vet4Pets</p>
+                  <h1 className={styles.heroH1}>
+                    Veterinarska Klinika Vet4Pets
+                  </h1>
                 </div>
               </div>
               <div className={styles.animationContainer}>
-                <h1 ref={titleRef}>Mi pazimo na vaše ljubimce!</h1>
+                <h2 className={styles.heroTitle} ref={titleRef}>
+                  Mi pazimo na vaše ljubimce!
+                </h2>
               </div>
               <div className={styles.animationContainer}>
                 <p ref={subTitleRef} className={styles.stackException}>

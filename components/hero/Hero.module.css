@@ -1,3 +1,17 @@
+.heroH1 {
+  font-size: var(--s0);
+}
+
+.heroTitle {
+  font-size: var(--s4);
+}
+
+@media(max-width: 450px){
+  .heroTitle{
+    font-size: var(--s2);
+  }
+}
+
 .heroBackground {
   position: relative;
   background-color: var(--primary);

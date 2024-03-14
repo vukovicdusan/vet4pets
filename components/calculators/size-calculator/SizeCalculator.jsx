@@ -24,7 +24,7 @@ const SizeCalculator = () => {
     <div className={styles.center}>
       <Title>
         <div className={styles.title}>
-          <h2 className="section-title">Koliko će porasti moj pas?</h2>
+          <h1 className="section-title">Koliko će porasti moj pas?</h1>
           <Underline color={"secondary"}></Underline>
         </div>
       </Title>
