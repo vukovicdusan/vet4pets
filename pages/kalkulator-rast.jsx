@@ -8,10 +8,10 @@ const dogSizeCalculator = () => {
   return (
     <>
       <Head>
-        <title>vet4Pets - Veterinarska ordinacija</title>
+        <title>vet4Pets - Kalkulator za odredjivanje rasta pasa</title>
         <meta
           name="description"
-          content="vet4Pets - Kalkulatori odredjivanje rasta pasa"
+          content="vet4Pets - Kalkulator za odredjivanje rasta pasa - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

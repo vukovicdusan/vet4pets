@@ -15,8 +15,11 @@ const calorieCalculator = () => {
   return (
     <>
       <Head>
-        <title>vet4Pets - Veterinarska ordinacija</title>
-        <meta name="description" content="vet4Pets - Kalkulator za kalorije" />
+        <title>vet4Pets - Kalkulator kalorija za pse</title>
+        <meta
+          name="description"
+          content="vet4Pets - Kalkulator za kalorije - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

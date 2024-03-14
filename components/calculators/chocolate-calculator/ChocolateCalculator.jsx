@@ -22,7 +22,7 @@ const ChocolateCalculator = () => {
     <div className={styles.center}>
       <Title>
         <div className={styles.title}>
-          <h2 className="section-title">Trovanje čokoladom</h2>
+          <h2 className="section-title">Trovanje čokoladom kod pasa</h2>
           <Underline color={"secondary"}></Underline>
         </div>
       </Title>

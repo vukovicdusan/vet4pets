@@ -20,7 +20,7 @@ const LiquidCalculator = () => {
     <div className={styles.center}>
       <Title>
         <div className={styles.title}>
-          <h2 className="section-title">Unos tečnosti</h2>
+          <h2 className="section-title">Unos tečnosti kod pasa</h2>
           <Underline color={"secondary"}></Underline>
         </div>
       </Title>

@@ -8,10 +8,10 @@ const chocolateCalculator = () => {
   return (
     <>
       <Head>
-        <title>vet4Pets - Veterinarska ordinacija</title>
+        <title>vet4Pets - Trovanje čokoladom kod pasa </title>
         <meta
           name="description"
-          content="vet4Pets - Kalkulatori za trovanje čokoladom"
+          content="vet4Pets - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica - Kalkulator za trovanje čokoladom kod pasa"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -30,7 +30,7 @@ const CalorieCalculator = () => {
     <div className={styles.center}>
       <Title>
         <div className={styles.title}>
-          <h2 className="section-title">Kalkulator Kalorija</h2>
+          <h2 className="section-title">Kalkulator kalorija za pse</h2>
           <Underline
             // position={"center"}
             color={"secondary"}

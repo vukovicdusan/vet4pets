@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Head>
         <title>vet4Pets - Veterinarska ordinacija</title>
-        <meta name="description" content="vet4Pets - Veterinarska ordinacija" />
+        <meta name="description" content="vet4Pets - Veterinarska ordinacija - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
