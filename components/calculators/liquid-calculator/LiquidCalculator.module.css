@@ -13,6 +13,7 @@
 }
 
 .info {
+  --stack-align: center;
   color: var(--text-dark);
   composes: stack from "@/styles/Stack.module.css";
 }
