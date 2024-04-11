@@ -155,7 +155,6 @@ const CalorieCalculator = () => {
           <button className="button">Izračunaj</button>
         </form>
         <div className={styles.info}>
-          {/* <h2></h2> */}
           <p>
             Održavanje zdrave težine ključno je za opšte blagostanje i
             dugovečnost vašeg psa. Baš kao i ljudi, psi zahtevaju uravnoteženu

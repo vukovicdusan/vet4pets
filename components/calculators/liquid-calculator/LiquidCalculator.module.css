@@ -8,6 +8,20 @@
   --stack-space: var(--s2);
 }
 
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+}
+
+.info {
+  color: var(--text-dark);
+  composes: stack from "@/styles/Stack.module.css";
+}
+
+.info ul {
+  list-style: disc;
+  margin-left: var(--s-1);
+}
+
 .center {
   composes: center from "@/styles/Center.module.css";
 }
