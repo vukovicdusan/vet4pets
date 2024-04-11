@@ -226,7 +226,6 @@ h6 {
     font-size: var(--s0);
   }
   .h2-sized-h3 {
-    text-align: start;
     font-size: var(--s1);
   }
 }
