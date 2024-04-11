@@ -5,6 +5,7 @@ import LiquidCalculator from "@/components/calculators/liquid-calculator/LiquidC
 import SmallNav from "@/components/small-nav/SmallNav";
 import Region from "@/components/layout/Region";
 import Wrapper from "@/components/layout/Wrapper";
+import Contact from "@/components/contact/Contact";
 
 const calorieCalculator = () => {
   const [navItem, setNavItem] = useState("Kalkulator kalorija");
@@ -35,6 +36,7 @@ const calorieCalculator = () => {
             <LiquidCalculator></LiquidCalculator>
           )}
         </Wrapper>
+        <Contact shapedivider={false} title={false}></Contact>
       </Region>
     </>
   );

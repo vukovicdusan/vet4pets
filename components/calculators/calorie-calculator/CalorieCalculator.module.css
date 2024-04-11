@@ -2,12 +2,21 @@
   composes: stack from "@/styles/Stack.module.css";
   --stack-align: center;
   color: var(--text-dark);
+  margin-top: var(--s0);
 }
 
 .stack > * + * {
   --stack-space: var(--s2);
 }
 
+.switcher {
+  composes: switcher from "@/styles/Switcher.module.css";
+}
+
+.info {
+  composes: stack from "@/styles/Stack.module.css";
+  color: var(--text-dark);
+}
 .center {
   composes: center from "@/styles/Center.module.css";
 }
