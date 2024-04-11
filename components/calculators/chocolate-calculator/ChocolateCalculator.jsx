@@ -9,8 +9,9 @@ const ChocolateCalculator = () => {
   const [inputValues, changeHandler] = useInput({
     weight: 0,
     chocolateAmount: 0,
-    chocolateType: 0.0882,
+    chocolateType: "white",
   });
+  console.log(inputValues.chocolateType);
   const [, , calculateChocolate, toxicity] = useCalculator();
 
   const submitHandler = (e) => {
@@ -65,7 +66,7 @@ const ChocolateCalculator = () => {
               onChange={(e) => changeHandler(e)}
               id="chocolateType"
               name="chocolateType"
-              defaultValue={0.00882}
+              defaultValue={"white"}
             >
               <option value={"white"}>Bela</option>
               <option value={"milk"}>Mlečna</option>
