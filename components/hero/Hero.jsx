@@ -49,8 +49,7 @@ const Hero = () => {
               </div>
               <div className={styles.animationContainer}>
                 <p ref={subTitleRef} className={styles.stackException}>
-                  Brinemo o zdravlju Vaših ljubimaca 24h dnevno. Kontaktirajte
-                  nas!
+                  Brinemo o zdravlju Vaših ljubimaca. Kontaktirajte nas!
                 </p>
               </div>
               <div className={styles.animationContainer}>
