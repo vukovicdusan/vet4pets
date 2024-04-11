@@ -3,6 +3,7 @@ import Head from "next/head";
 import ChocolateCalculator from "@/components/calculators/chocolate-calculator/ChocolateCalculator";
 import Region from "@/components/layout/Region";
 import Wrapper from "@/components/layout/Wrapper";
+import Contact from "@/components/contact/Contact";
 
 const chocolateCalculator = () => {
   return (
@@ -20,6 +21,7 @@ const chocolateCalculator = () => {
         <Wrapper>
           <ChocolateCalculator></ChocolateCalculator>
         </Wrapper>
+        <Contact shapedivider={false} title={false}></Contact>
       </Region>
     </>
   );
