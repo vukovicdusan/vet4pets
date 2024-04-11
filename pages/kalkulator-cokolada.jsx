@@ -14,6 +14,11 @@ const chocolateCalculator = () => {
           name="description"
           content="vet4Pets - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica - Kalkulator za trovanje čokoladom kod pasa"
         />
+        <link
+          rel="canonical"
+          href="https://vet4pets.rs/kalkulator-cokolada"
+          key="canonical"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

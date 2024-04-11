@@ -16,6 +16,7 @@ export default function Home() {
           content="vet4Pets - Veterinarska ordinacija - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://vet4pets.rs/" key="canonical" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero></Hero>

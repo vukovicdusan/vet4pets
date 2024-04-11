@@ -21,6 +21,11 @@ const calorieCalculator = () => {
           name="description"
           content="vet4Pets - Kalkulator za kalorije - Veterinar Beograd - Veterinar Železnik - Veterinar Čukarica"
         />
+        <link
+          rel="canonical"
+          href="https://vet4pets.rs/kalkulator-kalorija"
+          key="canonical"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
