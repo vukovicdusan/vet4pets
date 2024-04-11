@@ -183,6 +183,13 @@ const CalorieCalculator = () => {
             personalizovanog plana ishrane koji će osigurati da vaš pas ostane
             srećan, zdrav i pun energije.
           </p>
+          <p>
+            Posvetiti vreme određivanju potreba vašeg psa za kalorijama je
+            proaktivni korak ka njegovom blagostanju. Sa našim kalkulatorom
+            kalorija i savetima vašeg veterinara, možete obezbediti svom čupavom
+            saputniku ishranu koja mu je potrebna da bi procvetao u svakoj fazi
+            života.
+          </p>
         </div>
       </div>
     </div>
