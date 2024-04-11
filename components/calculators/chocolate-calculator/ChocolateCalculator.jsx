@@ -106,8 +106,25 @@ const ChocolateCalculator = () => {
         </form>
         <div className={`${styles.infoStack} ${styles.stack}`}>
           <p>
-            Uz pomoć našeg kalkulatora možete izračunati da li je vaš pas u
-            opasnosti ukoliko je pojeo čokoladu i da li ima potrebe za brigu.
+            Čokolada je ukusna poslastica za ljude, ali može biti otrovna za
+            naše kućne ljubimce. Teobromin i kofein, koji su prisutni u
+            čokoladi, mogu izazvati različite zdravstvene probleme kod pasa, od
+            blage gastrointestinalne nelagodnosti do ozbiljne toksičnosti pa čak
+            i smrti. Naš kalkulator trovanja čokoladom pomaže vam da procenite
+            potencijalni rizik i ozbiljnost ingestije čokolade kod pasa.
+          </p>
+          <p>
+            Ozbiljnost trovanja čokoladom zavisi od faktora poput vrste
+            konzumirane čokolade, količine unete i veličine psa. Tamna čokolada
+            i čokolada za kuvanje sadrže veće količine teobromina i kofeina, što
+            ih čini toksičnijim od mlečne čokolade ili bele čokolade. Čak i male
+            količine čokolade mogu biti opasne za pse, pa je važno brzo
+            reagovati ako dođe do ingestije.
+          </p>
+          <p>
+            Simptomi trovanja čokoladom kod pasa mogu uključivati povraćanje,
+            proliv, povećanu žeđ i mokrenje, nemir, ubrzano disanje, ubrzan rad
+            srca, tremor, napade i čak gubitak svesti.
           </p>
           <p className="error">
             U slučaju bilo kakve nedoumice i sumnjivog ponašanja psa, uvek je
@@ -115,10 +132,18 @@ const ChocolateCalculator = () => {
             trebao da bude zamena za stručnu medicinsku pomoć i savet.
           </p>
           <p>
-            Čokolada sadrži teobromin koji je bezopasan za ljude, ali je veoma
-            otrovan za pse. U čokoladi i sličnim proizvodima se nalazi i kofein.
-            Kalkulator sabira dozu kofeina i teobromina i izračunava nivo
-            toksičnosti.
+            Da biste sprečili trovanje čokoladom, držite sve čokoladne
+            proizvode, uključujući kakao prah, zrna kakaa, čokoladu i pekarske
+            proizvode, van domašaja vašeg psa. Edukujte članove porodice i goste
+            o opasnostima hranjenja pasa čokoladom i budite pažljivi tokom
+            praznika i posebnih prilika kada je konzumacija čokolade česta.
+          </p>
+          <p>
+            Korišćenjem našeg kalkulatora trovanja čokoladom i ostajanjem budnih
+            u vezi sa opasnostima od čokolade, možete zaštititi svog psa od ove
+            česte opasnosti u domaćinstvu. Zapamtite, prevencija je ključna, ali
+            ako dođe do incidenta, brza akcija i veterinarska intervencija su
+            ključni za uspešan ishod.
           </p>
         </div>
       </div>
