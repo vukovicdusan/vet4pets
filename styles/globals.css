@@ -199,6 +199,10 @@ h6 {
   font-size: var(--s1);
 }
 
+.h2-sized-h3 {
+  font-size: var(--s3);
+}
+
 @media (max-width: 450px) {
   h1 {
     font-size: var(--s2);
@@ -220,6 +224,10 @@ h6 {
   }
   body {
     font-size: var(--s0);
+  }
+  .h2-sized-h3 {
+    text-align: start;
+    font-size: var(--s1);
   }
 }
 

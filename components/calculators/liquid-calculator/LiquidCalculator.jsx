@@ -69,7 +69,7 @@ const LiquidCalculator = () => {
           <button className="button">Izračunaj</button>
         </form>
         <div className={styles.info}>
-          {/* <h2></h2> */}
+          <h2 className="h2-sized-h3">Potrebe Vašeg psa za vodom</h2>
           <p>
             Hidratacija je ključna za opšte zdravlje i blagostanje vašeg psa.
             Baš kao i ljudi, psi zahtevaju adekvatan unos vode kako bi podržali

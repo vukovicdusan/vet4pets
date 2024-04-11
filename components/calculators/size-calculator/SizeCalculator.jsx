@@ -78,6 +78,7 @@ const SizeCalculator = () => {
           <button className="button">Izračunaj</button>
         </form>
         <div className={`${styles.infoStack} ${styles.stack}`}>
+          <h2 className="h2-sized-h3">Predviđanje Rasta Pasa</h2>
           <p>
             Prisustvovanje rastu vašeg malog psa je uzbudljivo putovanje
             ispunjeno iščekivanjem. Naš kalkulator veličine može vam pomoći da

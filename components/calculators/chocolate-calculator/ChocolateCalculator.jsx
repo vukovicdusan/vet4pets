@@ -106,6 +106,7 @@ const ChocolateCalculator = () => {
           <button className="button">Izračunaj</button>
         </form>
         <div className={`${styles.infoStack} ${styles.stack}`}>
+          <h2 className="h2-sized-h3">Čokolada i psi</h2>
           <p>
             Čokolada je ukusna poslastica za ljude, ali može biti otrovna za
             naše kućne ljubimce. Teobromin i kofein, koji su prisutni u
