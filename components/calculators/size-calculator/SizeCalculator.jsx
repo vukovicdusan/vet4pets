@@ -79,10 +79,41 @@ const SizeCalculator = () => {
         </form>
         <div className={`${styles.infoStack} ${styles.stack}`}>
           <p>
+            Prisustvovanje rastu vašeg malog psa je uzbudljivo putovanje
+            ispunjeno iščekivanjem. Naš kalkulator veličine može vam pomoći da
+            planirate buduće potrebe vašeg psa, pružajući vredne uvide u njihov
+            potencijalni rast.
+          </p>
+          <p>
+            Nekoliko faktora doprinosi konačnoj veličini psa, uključujući rasu,
+            genetiku, ishranu i zdravlje. Iako genetika igra značajnu ulogu,
+            faktori okoline poput ishrane i vežbanja takođe mogu uticati na
+            obrasce rasta.
+          </p>
+          <p>
             Uz ovaj kalkulator možete predvideti koliko će porasti vaš štenac,
             posebno ukoliko je mešanac kojeg ste usvojili sa ulice ili udomili.
             Može se reći da psi dostižu svoju punu veličinu već sa 12 meseci, a
             koliki će vaš ljubimac tada biti, otkriće vam naš kalkulator.
+            Dobićete projekciju očekivane odrasle veličine vašeg psa. Ova
+            procena može vam pomoći da se pripremite za njihove potrebe, od
+            izbora odgovarajuće veličine kaveza, kreveta, veličine ogrlice i
+            povodca do planiranja vežbanja i veterinarske nege.
+          </p>
+          <p>
+            Važno je imati na umu da su projekcije rasta samo procene i mogu
+            varirati u zavisnosti od individualnih faktora. Iako naš kalkulator
+            pruža korisne uvide, nije definitivan pokazatelj konačne veličine
+            vašeg psa. Redovno praćenje rasta vašeg psa i konsultacija sa
+            veterinarom mogu vam pomoći da osigurate da ostanu zdravi i srećni
+            kako odrastaju.
+          </p>
+          <p>
+            Iako naš kalkulator veličine pruža korisne smernice, važno je da se
+            posavetujete sa veterinarom za personalizovane savete o rastu i
+            razvoju vašeg psa. Vaš veterinar može pružiti uvide u specifične
+            potrebe vašeg psa i ponuditi preporuke kako bi podržao njihovo
+            ukupno zdravlje i sreću.
           </p>
         </div>
       </div>

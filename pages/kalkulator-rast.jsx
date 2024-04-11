@@ -1,4 +1,5 @@
 import SizeCalculator from "@/components/calculators/size-calculator/SizeCalculator";
+import Contact from "@/components/contact/Contact";
 import Region from "@/components/layout/Region";
 import Wrapper from "@/components/layout/Wrapper";
 import Head from "next/head";
@@ -20,6 +21,7 @@ const dogSizeCalculator = () => {
         <Wrapper>
           <SizeCalculator></SizeCalculator>
         </Wrapper>
+        <Contact shapedivider={false} title={false}></Contact>
       </Region>
     </>
   );

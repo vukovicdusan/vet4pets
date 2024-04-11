@@ -2,6 +2,7 @@
   composes: stack from "@/styles/Stack.module.css";
   --stack-align: center;
   color: var(--text-dark);
+  margin-top: var(--s0);
 }
 
 .stack > * + * {
