@@ -1,10 +1,16 @@
 .footer {
-	background-color: var(--primary);
-	color: var(--text-light);
-	font-size: var(--s-2);
-	text-align: center;
+  background-color: var(--primary);
+  color: var(--text-light);
+  font-size: var(--s-2);
+  text-align: center;
 }
 
 .footerCenter {
-	composes: center from "../styles/Center.module.css";
+  composes: center from "../styles/Center.module.css";
+}
+
+.footer a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: white;
 }
